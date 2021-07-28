@@ -25,6 +25,8 @@ This site runs on [Nuxt Content](https://content.nuxtjs.org/). Please review the
 
 If you'd like to run this site locally on your machine, follow these steps:
 
+### Installing on your local machine
+
 #### Docker usage
 In an effort to keep our NPM versions the same, we have a `docker-compose.yml` file that will prepare your development environment for you. We encourage you to use this even if you have NPM installed on your machine. This will guarantee we have the same version across everyone's computer.
 
@@ -39,10 +41,30 @@ docker compose run node yarn install
 #### Development
 
 ```bash
-docker compose up
+docker compose pull && docker compose up
 ```
 
 Wait for your machine to complete the build, then your cevelopment copy will be available at http://localhost:3000
 
-#### Content
+### Managing content
+
+#### Content Location
 All content is located under the `/content` folder, followed by the language. You will find the markdown files in there.
+
+#### Organizing Pages
+Everything is organized by ["front matter" and Nuxt Content](https://content.nuxtjs.org/themes/docs#front-matter).
+
+Make sure you are setting your `position` and `category` fields correctly. For example:
+```yaml
+---
+title: My 2nd Page Title
+description: ''
+position: 1.1
+category: My Category
+---
+```
+The above result would look like this:
+<p align="center">
+	<img src="https://raw.githubusercontent.com/postalserver/docs/main/static/docs-category-and-postion.png">
+</p>
+
