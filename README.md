@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="https://postal.atech.media/" target="_blank">
-		<img src="https://docs.postalserver.io/preview.png" width="1200" alt="Postal Server Documentation Preview">
+		<img src="https://raw.githubusercontent.com/postalserver/docs/main/static/preview.png" width="1200" alt="Postal Server Documentation Preview">
 	</a>
 </p>
 <p align="center">
