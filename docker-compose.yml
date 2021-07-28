@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  node:
+    image: node:lts
+    command: "yarn dev"
+    environment:
+      HOST: 0.0.0.0
+    ports:
+        - "3000:3000"
+    volumes:
+        - .:/usr/src/app
+    working_dir: /usr/src/app

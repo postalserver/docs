@@ -25,21 +25,24 @@ This site runs on [Nuxt Content](https://content.nuxtjs.org/). Please review the
 
 If you'd like to run this site locally on your machine, follow these steps:
 
+#### Docker usage
+In an effort to keep our NPM versions the same, we have a `docker-compose.yml` file that will prepare your development environment for you. We encourage you to use this even if you have NPM installed on your machine. This will guarantee we have the same version across everyone's computer.
+
 #### Setup
 
 Install dependencies:
 
 ```bash
-npm run install
+docker compose run node yarn install
 ```
 
 #### Development
 
 ```bash
-npm run dev
+docker compose up
 ```
 
-A development copy will be available at http://localhost:3000
+Wait for your machine to complete the build, then your cevelopment copy will be available at http://localhost:3000
 
 #### Content
 All content is located under the `/content` folder, followed by the language. You will find the markdown files in there.
