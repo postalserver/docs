@@ -21,7 +21,7 @@ Postal is a complete and fully featured mail server for use by websites & web se
 <list :items="features"></list><br />
 
 ## Geting started
-<!-- * [Quick install guide](https://github.com/atech/postal/wiki/Quick-Install)
-* [Installation docs](https://github.com/atech/postal/wiki/Installation)
-* [FAQs](https://github.com/atech/postal/wiki/FAQs) & [Features](https://github.com/atech/postal/wiki/Features)
-* [Slack Channel](https://slack.k.io/) - for live support, questions or comments. -->
+* [Quick install guide](/installation/quick-install)
+* [Installation docs](/installation/installation)
+* [FAQs](/welcome/faqs) & [Features](/welcome/feature-list)
+* [Slack Channel](https://slack.k.io/) - for live support, questions or comments.
