@@ -8,5 +8,5 @@ services:
     ports:
         - "3000:3000"
     volumes:
-        - .:/usr/src/app
+        - .:/usr/src/app:cached
     working_dir: /usr/src/app
