@@ -1,0 +1,17 @@
+{
+  "name": "postal-docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content-theme-docs": "^0.5.5",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "nuxt": "^2.14.6",
+    "shr-buttons": "^2.0.3"
+  }
+}
