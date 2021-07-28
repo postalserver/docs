@@ -44,7 +44,7 @@ docker compose run node yarn install
 docker compose pull && docker compose up
 ```
 
-Wait for your machine to complete the build, then your cevelopment copy will be available at http://localhost:3000
+Wait for your machine to complete the build, then your development copy will be available at http://localhost:3000
 
 ### Managing content
 
