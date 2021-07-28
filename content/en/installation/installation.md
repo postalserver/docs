@@ -8,7 +8,9 @@ Postal is a semi-complex beast, but getting it up and running shouldn't take too
 
 If you're not too interested in the specific of the installation, you can use the [quick install guide](/installation/quick-install) which will install a basic copy of Postal on a clean Ubuntu 16.04 server.
 
-**It is highly recommended/required that you install Postal on a clean server. This guide assumes that the server does not have any other services running on it.**
+<alert type="danger">
+It is highly recommended/required that you install Postal on a clean server. This guide assumes that the server does not have any other services running on it.
+</alert>
 
 ## Planning & Prerequisites 
 
