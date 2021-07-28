@@ -1,4 +1,12 @@
 /*!
+ * clipboard.js v2.0.8
+ * https://clipboardjs.com/
+ *
+ * Licensed MIT © Zeno Rocha
+ */
+
+
+/*!
   * vue-router v3.5.2
   * (c) 2021 Evan You
   * @license MIT
@@ -29,14 +37,6 @@
  * vuex v3.6.2
  * (c) 2021 Evan You
  * @license MIT
- */
-
-
-/*!
- * clipboard.js v2.0.8
- * https://clipboardjs.com/
- *
- * Licensed MIT © Zeno Rocha
  */
 
 
