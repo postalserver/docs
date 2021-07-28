@@ -28,7 +28,7 @@ If you'd like to run this site locally on your machine, follow these steps:
 ### Installing on your local machine
 
 #### Docker usage
-In an effort to keep our NPM versions the same, we have a `docker-compose.yml` file that will prepare your development environment for you. We encourage you to use this even if you have NPM installed on your machine. This will guarantee we have the same version across everyone's computer.
+In an effort to keep our Node versions the same, we have a `docker-compose.yml` file that will prepare your development environment for you. We encourage you to use this even if you have NPM installed on your machine. This will guarantee we have the same version across everyone's computer.
 
 #### Setup
 
@@ -38,7 +38,7 @@ Install dependencies:
 docker compose run node yarn install
 ```
 
-#### Development
+#### Running the docs site in development
 
 ```bash
 docker compose pull && docker compose up
