@@ -23,7 +23,7 @@ Contributions are welcome! Please open up a pull request that clearly describes 
 
 This site runs on [Nuxt Content](https://content.nuxtjs.org/). Please review their docs for how this framework works.
 
-If you'd like to run this site locally on your machine, follow these steps":
+If you'd like to run this site locally on your machine, follow these steps:
 
 #### Setup
 
