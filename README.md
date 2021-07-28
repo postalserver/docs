@@ -23,9 +23,9 @@ Contributions are welcome! Please open up a pull request that clearly describes 
 
 This site runs on [Nuxt Content](https://content.nuxtjs.org/). Please review their docs for how this framework works.
 
-If you'd like to run this site locally on your machine, follow these steps:
-
 ### Installing on your local machine
+
+If you'd like to run this site locally on your machine, follow these steps:
 
 #### Docker usage
 In an effort to keep our Node versions the same, we have a `docker-compose.yml` file that will prepare your development environment for you. We encourage you to use this even if you have NPM installed on your machine. This will guarantee we have the same version across everyone's computer.
