@@ -32,7 +32,7 @@ export default theme({
   buildModules: [
   ],
   sitemap: {
-    hostname: 'https://docs.',
+    hostname: 'https://docs.postalserver.io',
     gzip: true,
     routes: createSitemapRoutes
   },
