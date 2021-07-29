@@ -57,3 +57,5 @@ docker run -d \
 ```
 
 Once this has started, it will issue an SSL certificate for your domain and you'll be able to immediately access the Postal web interface and login with the user you created in one of the previous steps.
+
+![Image](https://share.adam.ac/21/Screen-Shot-2021-07-29-23-26-18.23-Qwv2DD40v4jMEoaHtE.png)
