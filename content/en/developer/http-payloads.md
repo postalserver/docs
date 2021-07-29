@@ -1,15 +1,16 @@
 ---
-title: HTTP Payloads
+title: Receiving e-mail by HTTP
 description: ''
-position: 4.2
+position: 4.0
 category: Developer
 ---
-To receive incoming messages in Postal you can dispatch incoming messages to an HTTP URL of your choosing.
+
+One of the most useful features in Postal is the ability to have incoming messages delivered to your own application as soon as they arrive. To receive incoming messages in Postal you can dispatch incoming messages to an HTTP URL of your choosing.
 
 Each endpoint has an HTTP URL (we highly recommend https) as well as a set of rules which defines how data is sent to you.
 
 * You can choose whether data is encoded as normal form data or whether we sent JSON in the body of the request.
-* You can choose whether we parse the data into a set of fields (like `to`, `from`, `subject` etc...) or whether you'd prefer to just receive the raw message.
+* You can choose whether to receive the raw message (raw) or have it as a JSON dictionary (processed).
 * You can choose whether you'd like replies & signatures to be separated from the plain body of the message.
 
 Your server should accept our incoming message and reply within 5 seconds. It it takes longer than this, we will assume it has failed and the message will be retried. Your server should send a `200 OK` status to signal to us that you've received the message.
@@ -20,9 +21,9 @@ When a message permanently fails to be delivered to your endpoint (i.e. the serv
 
 You can view the attempts (along with debugging information) on the message page in the web interface.
 
-## The processed/hash payload
+## The processed payload
 
-When you chose to receive the message as a hash, you'll receive a payload with the following attributes.
+When you chose to receive the message as JSON (processed), you'll receive a payload with the following attributes.
 
 ```javascript
 {
@@ -52,13 +53,14 @@ When you chose to receive the message as a hash, you'll receive a payload with t
       "filename":"test.txt",
       "content_type":"text/plain",
       "size":12,
-      "data":"SGVsbG8gd29ybGQh\n"
+      "data":"SGVsbG8gd29ybGQh"
     }
   ]
 }
 ```
 
-You will only have the `attachments` attribute if you have enabled it. The `data` attribute for each attachment is Base64 encoded.
+* You will only have the `attachments` attribute if you have enabled it.
+* The `data` attribute for each attachment is Base64 encoded.
 
 ## The raw message payload
 
@@ -73,4 +75,4 @@ When you choose to receive the full message, you will receive the following attr
 }
 ```
 
-The `base64` attribute specifies whether or not the `message` attribute is encoded with Base64. This is likely to be true all the time.
+* The `base64` attribute specifies whether or not the `message` attribute is encoded with Base64. This is likely to be true all the time.

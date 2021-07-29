@@ -1,10 +1,10 @@
 ---
 title: Spam & Virus Checking
 description: ''
-position: 3.0
+position: 3.2
 category: Features
 ---
-Postal can integrate with SpamAssassin and ClamAV to automatically scan incoming & outgoing messages that pass through mail servers. 
+Postal can integrate with SpamAssassin and ClamAV to automatically scan incoming & outgoing messages that pass through mail servers.
 
 <alert type="warning">
 By default, this functionality is disabled.
@@ -44,7 +44,7 @@ postal restart
 
 ### Classifying Spam
 
-The spam system is based on a numeric scoring system and different scores are assigned to different issues which may appear in a message. You can configure different thresholds which define at which point a message is treated as spam. We recommend starting at about 5 and updating this once you've seen how your incoming messages are classified. 
+The spam system is based on a numeric scoring system and different scores are assigned to different issues which may appear in a message. You can configure different thresholds which define at which point a message is treated as spam. We recommend starting at about 5 and updating this once you've seen how your incoming messages are classified.
 
 You have 3 options which can be configured on a per route basis which defines how spam messages are treated:
 

@@ -23,7 +23,3 @@ You can run your message through something like [Mail Tester](https://www.mail-t
 ## Can you add [mailing list feature]?
 
 No. Postal is a mail transport agent and not a mailing list manager. We don't want to add features that a better suited in another application, for example, address books or handling the un-subscription of people from a database.
-
-## Something doesn't work. Can you help?
-
-Probably but you need to help us help you. You'll find logs in `/opt/postal/app/log`. You should look at these and include as much information as possible from them which you think looks relevant to your issue. 

@@ -1,16 +1,14 @@
 ---
 title: IP Pools
 description: ''
-position: 3.2
+position: 3.1
 category: Features
 ---
 Postal supports sending messages from different IP addresses. This allows you to configure certain sets of IPs for different mail servers or send from different IPs based on the sender or recipient addresess.
 
-By default, this functionality is disabled and Postal will send from any system IP.
-
 ## Enabling IP pools
 
-To begin, you'll need to enable IP pools. You can do this by setting the following in your `postal.yml` configuration file.
+By default, IP pools are disabled and all email is sent from any IP address on the host running the workers. To use IP pools, you'll need to enable them in the configuration file. You can do this by setting the following in your `postal.yml` configuration file. You'll then need to restart Postal using `postal stop` and `postal start`.
 
 ```yaml
 general:
@@ -25,6 +23,6 @@ Once an IP pool has been added, you'll need to assign it any organization that s
 
 Once allocated to an organization, you can assign the IP pool to servers from the server's **Settings** page. You can also use the IP pool to configure IP rules for the organization or server.
 
-## Configuring IPs on server
-
-It's important to make sure that the IP addresses you add in the web interface are actually configured on your Postal servers. If the IPs don't exist on the server, message delivery may fail or messages will not be dequeued correctly.
+<alert type="warning">
+It's <b>very important</b> to make sure that the IP addresses you add in the web interface are actually configured on your Postal servers. If the IPs don't exist on the server, message delivery may fail or messages will not be dequeued correctly.
+</alert>

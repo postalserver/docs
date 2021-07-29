@@ -1,14 +1,18 @@
 ---
 title: Using the API
 description: ''
-position: 4.3
+position: 4.2
 category: Developer
 ---
 The HTTP API allows you to send messages to us using JSON over HTTP. You can either talk to the API using your current HTTP library or you can use one of the pre-built libraries.
 
-[Full API documentation](https://postalserver.github.io/postal-api)
+[Full API documentation](https://apiv1.postalserver.io)
 
-# General API Instructions
+<alert>
+This API does not support managing all the functions of Postal. There are plans to introduce a new v2 API which will have more functionality and significantly better documentation. We do not have an ETA for this. Additionally, we will not be accepting any pull requests to extend the current API to have any further functionality than it currently does.
+</alert>
+
+## General API Instructions
 
 * You should sent POST requests to the URLs shown below.
 * Parameters should be encoded in the body of the request and `application/json` should be set as the `Content-Type`.
@@ -29,7 +33,7 @@ To authenticate to the API you'll need to create an API credential for your mail
 
 To authenticate to the API, you need to pass us this key in the `X-Server-API-Key` HTTP header.
 
-# Sending a message
+## Sending a message
 
 There are two ways to send a message - you can either provide each attribute needed for the e-mail individually or you can craft your own RFC 2822 message and send this instead.
 

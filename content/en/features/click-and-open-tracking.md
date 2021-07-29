@@ -1,48 +1,36 @@
 ---
 title: Click & Open Tracking
 description: ''
-position: 3.1
+position: 3.0
 category: Features
 ---
-Postal supports tracking opens & clicks from e-mails. There are a number of additional steps required to configure this.
 
-<alert type="warning">
-By default, this functionality is disabled.
-</alert>
+Postal supports tracking opens & clicks from e-mails. This allows you to see when people open messages or they click links within them.
+
+<img src="/screenshots/tracked-message.png" width="1280" alt=""/>
+
 
 ## How it works
 
-Once enabled, Postal will automatically scan your outgoing messages and replace any links with a new link that goes via your Postal web server. When the link is clicked, Postal will log the click and redirect to the user to the original URL automatically. The links that are included in the e-mail should be on the same domain as the sender and therefore you need to configure a subdomain like `click.yourdomain.com` and point it to your Postal server.
+Once enabled, Postal will automatically scan your outgoing messages and replace any links & images with a new URLs that goes via your Postal web server. When the link is clicked, Postal will log the click and redirect to the user to the original URL automatically. The links that are included in the e-mail should be on the same domain as the sender and therefore you need to configure a subdomain like `click.yourdomain.com` and point it to your Postal server.
 
-## The tracking web server
+## Configuring your web server
 
-To facilitate the logging & redirection, Postal runs a separate web server process that listens on ports 5010 (for HTTP) and 5011 (for HTTPS). This web server is designed to respond quickly to requests and is able to support TLS using Let's Encrypt automatically. Postal will handle the generation of certificates for any "tracking domains" that you add.
+To avoid messages being marked as spam, it's important that the domain that we use in the re-written URLs is on the same domain as that sending the message. This means if you are sending mail from `example.com`, you'll need to setup `click.example.com` (or whatever you choose) to point to your Postal server.
 
-## Setup Let's Encrypt
+You'll need to add an appropriate virtual host on your web server that proxies traffic from that domain to the Postal web server. The web server must add the `X-Postal-Track-Host: 1` header so the Postal web server knows to treat requests as tracking requests.
 
-Postal includes Let's Encrypt support for generating certificates automatically for tracking domains. You need to register your LE private key before you can use this. Do this by providing your e-mail address to the `register-lets-encrypt` method. By doing this you are agreeing to the Let's Encrypt terms.
+Once you have configured this, you should be able to visit your chosen domain in a browser and see `Hello.` printed back to you. If you don't see this, review your configuration until you do. If you don't see this and you enable the tracking, your messages will be sent with broken links and images.
 
-```
-postal register-lets-encrypt youremail@example.comn
-```
+If you're happy things are working, you can enable tracking as follows:
 
-## Enable the fast server
+1. Find the web server you wish to enable tracking on in the Postal web interface
+2. Go to the **Domains** item
+3. Select **Tracking Domains**
+4. Click **Add a tracking domain**
+5. Enter the domain that you have configured and choose the configuration you want to use. It is **highly** recommended that you use SSL for these connections. Anything else is likely to cause problems with reputation and user experience.
 
-You'll need to enable this by enabling the fast server in the configuration. 
-
-To avoid conflict with your management interface, you will need another static IP address that has ports 80 and 443 available. You should add something like this to your `postal.yml` configuration file. Replacing the bind address with the second IP address that you wish to use for the tracking server.
-
-```yaml
-fast_server:
-  enabled: true
-  bind_address: 192.168.0.4
-```
-
-You will need to make sure that your `nginx` server isn't already listening on this IP address. This can be configured in `/etc/nginx/sites-enabled/default`. You should update the `listen` lines as appropriate.
-
-## Once enabled...
-
-### Disable tracking on a per e-mail basis
+## Disabling tracking on a per e-mail basis
 
 If you don't wish to track anything in an email you can add a header to your e-mails before sending it.
 
@@ -50,13 +38,13 @@ If you don't wish to track anything in an email you can add a header to your e-m
 X-AMP: skip
 ```
 
-### Disabling tracking for certain link domains
+## Disabling tracking for certain link domains
 
 If there are certain domains you don't wish to track links, you can define these on the tracking domain settings page. For example, if you list `yourdomain.com` no links to this domain will be tracked.
 
-### Disabling tracking on a per link basis
+## Disabling tracking on a per link basis
 
-If you wish to disable tracking for a particular link, you can do so by inserting `+notrack` as shown below:
+If you wish to disable tracking for a particular link, you can do so by inserting `+notrack` as shown below. The `+notrack` will be removed leaving a plain link.
 
-* `https+notrack://atech.media`
-* `http+notrack://appmail.io/documentation`
+* `https+notrack://postalserver.io`
+* `http+notrack://katapult.io/signup`
