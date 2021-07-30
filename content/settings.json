@@ -1,9 +1,10 @@
 {
-  "title": "Postal SMTP Server Documentation",
+  "title": "Postal Documentation",
   "url": "https://docs.postalserver.io",
   "logo": {
     "light": "/logo-light.svg",
     "dark": "/logo-dark.svg"
   },
-  "github": "postalserver/docs"
+  "github": "postalserver/docs",
+  "defaultDir": ""
 }
