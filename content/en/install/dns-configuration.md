@@ -59,6 +59,10 @@ You can configure a global SPF record for your mail server which means domains d
   </tbody>
 </table>
 
+<alert>
+You may wish to replace `~all` with `-all` to make the SPF record stricter.
+</alert>
+
 ## Return Path
 
 The return path domain is the default domain that is used as the `MAIL FROM` for all messages sent through a mail server. You should add DNS records as below.
