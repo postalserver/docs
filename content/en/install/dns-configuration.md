@@ -60,7 +60,7 @@ You can configure a global SPF record for your mail server which means domains d
 </table>
 
 <alert>
-You may wish to replace `~all` with `-all` to make the SPF record stricter.
+You may wish to replace <code>~all</code> with <code>-all</code> to make the SPF record stricter.
 </alert>
 
 ## Return Path

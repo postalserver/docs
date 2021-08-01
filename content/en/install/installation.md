@@ -24,7 +24,7 @@ postal bootstrap postal.yourdomain.com
 Once generated, you should open up `/opt/postal/config/postal.yml` and add all the appropriate values for your installation (database passwords etc...).
 
 <alert>
-Note that the docker setup mounts `/opt/postal/config` as `/config` so any full directory paths mentioned in `postal.yml` will likely need to start with `/config` and not `/opt/postal/config`
+Note that the docker setup mounts <code>/opt/postal/config</code> as <code>/config</code> so any full directory paths mentioned in <code>postal.yml</code> will likely need to start with <code>/config</code> and not <code>/opt/postal/config</code>
 </alert>
 
 ## Initializing the database
