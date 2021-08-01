@@ -46,7 +46,7 @@ For both these methods, the API will return the same information as the result. 
 
 ```javascript
 {
-  "message_id":"abcabc@amrc.appmail.io",
+  "message_id":"message-id-in-uuid-format@rp.postal.yourdomain.com",
   "messages":{
     "john@example.com":{"id":37171, "token":"a4udnay1"},
     "mary@example.com":{"id":37172, "token":"bsfhjsdfs"}

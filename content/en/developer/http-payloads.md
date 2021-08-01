@@ -32,7 +32,7 @@ When you chose to receive the message as JSON (processed), you'll receive a payl
   "mail_from":"test@example.com",
   "token":"rtmuzogUauKN",
   "subject":"Re: Welcome to AwesomeApp",
-  "message_id":"81026759-68fb-4872-8c97-6dd2901cb33a@amrp.appmail.io",
+  "message_id":"81026759-68fb-4872-8c97-6dd2901cb33a@rp.postal.yourdomain.com",
   "timestamp":1478169798.924355,
   "size":"822",
   "spam_status":"NotSpam",
