@@ -54,7 +54,7 @@ You can configure a global SPF record for your mail server which means domains d
     <tr>
       <td>spf.postal.example.com</td>
       <td>TXT</td>
-      <td><code>v=spf1 ip4:192.168.1.3/24 ip6:2a00:1234:abcd:1::3/128 ~all</code></td>
+      <td><code>v=spf1 ip4:192.168.1.3 ip6:2a00:1234:abcd:1::3 ~all</code></td>
     </tr>
   </tbody>
 </table>
