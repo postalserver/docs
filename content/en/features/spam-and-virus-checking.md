@@ -38,7 +38,8 @@ spamd:
 ```
 
 ```
-postal restart
+postal stop
+postal start
 ```
 
 ### Classifying Spam
