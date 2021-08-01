@@ -1,5 +1,5 @@
 ---
-title: DNS
+title: DNS configuration
 description: ''
 position: 2.3
 category: Installation
@@ -92,7 +92,7 @@ The return path domain is the default domain that is used as the `MAIL FROM` for
       <td><code>v=spf1 a mx include:spf.postal.example.com ~all</code></td>
     </tr>
     <tr>
-      <td>rp.postal.example.com</td>
+      <td>postal._domainkey.rp.postal.example.com</td>
       <td>TXT</td>
       <td>Value from <code>postal default-dkim-record</code></td>
     </tr>
