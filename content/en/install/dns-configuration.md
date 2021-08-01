@@ -4,7 +4,7 @@ description: ''
 position: 2.3
 category: Installation
 ---
-To work properly, you'll need to configure a number of DNS records for your Postal installation. Review the table below and create appropriate DNS records on your DNS server. You will need to enter the record names you choose in your `postal.yml` configuration file.
+To work properly, you'll need to configure a number of DNS records for your Postal installation. Review the table below and create appropriate DNS records with your DNS provider. You will need to enter the record names you choose in your `postal.yml` configuration file.
 
 We'll assume for the purposes of this documentation you have both IPv4 and IPv6 available to your server. We'll use the following values in this documentation, you'll need to replace them as appropriate.
 
@@ -54,10 +54,14 @@ You can configure a global SPF record for your mail server which means domains d
     <tr>
       <td>spf.postal.example.com</td>
       <td>TXT</td>
-      <td><code>v=spf1 ip4:192.168.1.3/24 ip6:2a00:1234:abcd:1::3/128 ~all</code></td>
+      <td><code>v=spf1 ip4:192.168.1.3 ip6:2a00:1234:abcd:1::3 ~all</code></td>
     </tr>
   </tbody>
 </table>
+
+<alert>
+You may wish to replace `~all` with `-all` to make the SPF record stricter.
+</alert>
 
 ## Return Path
 
@@ -81,11 +85,6 @@ The return path domain is the default domain that is used as the `MAIL FROM` for
       <td>rp.postal.example.com</td>
       <td>AAAA</td>
       <td><code>2a00:1234:abcd:1::3</code></td>
-    </tr>
-    <tr>
-      <td>rp.postal.example.com</td>
-      <td>A</td>
-      <td><code>192.168.1.3</code></td>
     </tr>
     <tr>
       <td>rp.postal.example.com</td>

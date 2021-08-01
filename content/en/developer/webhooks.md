@@ -7,14 +7,14 @@ category: Developer
 
 Postal supports sending webhooks over HTTP when various events occur during the lifecycle of a message.
 
-This page lists all the different types of event along with an example JSON payload that you'll receive. In many cases, only a small amount of information will be sent, if you require more information you should use the API to get obtain it.
+This page lists all the different types of event along with an example JSON payload that you'll receive. In many cases, only a small amount of information will be sent, if you require more information you should use the API to obtain it.
 
 ## Message Status Events
 
 These events are triggered on various events in an e-mail's lifecycle. The payload format is identical for all messages however the `status` attribute may change. The following statuses may be delivered.
 
 * `MessageSent` - when a message is successfully delivered to a recipient/endpoint.
-* `MessageDelayed` - when a message's delivery has been delayed. This will be sent each time we attempt a delivery and a message is delayed further.
+* `MessageDelayed` - when a message's delivery has been delayed. This will be sent each time Postal attempts a delivery and a message is delayed further.
 * `MessageDeliveryFailed` - when a message cannot be delivered.
 * `MessageHeld` - when a message is held.
 
@@ -43,7 +43,7 @@ These events are triggered on various events in an e-mail's lifecycle. The paylo
 
 ## Message Bounces
 
-If we receive a bounce message for a message that was previously accepted, you'll receive the `MessageBounced` event.
+If Postal receives a bounce message for a message that was previously accepted, you'll receive the `MessageBounced` event.
 
 ```javascript
 {
@@ -64,7 +64,7 @@ If we receive a bounce message for a message that was previously accepted, you'l
     "token":"abcdef124",
     "direction":"incoming",
     "message_id":"5817a64332f44_4ec93ff59e79d154565eb@someserver.com",
-    "to":"abcde@amrp.appmail.io",
+    "to":"abcde@psrp.postal.yourdomain.com",
     "from":"postmaster@someserver.com",
     "subject":"Delivery Error",
     "timestamp":1477945179.12994,
@@ -101,7 +101,7 @@ If you have click tracking enabled, the `MessageLinkClicked` event will tell you
 
 ## DNS Error Event
 
-We constantly monitor your domains to ensure that your SPF/DKIM/MX records are correct. If you'd like to be notified when our checks fail, you can subscribe to the `DomainDNSError` event.
+Postal regularly monitors domains it knows about to ensure that your SPF/DKIM/MX records are correct. If you'd like to be notified when the checks fail, you can subscribe to the `DomainDNSError` event.
 
 ```javascript
 {

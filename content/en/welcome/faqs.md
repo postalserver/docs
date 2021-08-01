@@ -4,7 +4,7 @@ description: ''
 position: 1
 category: Welcome
 ---
-This hasn't been around enough for anyone to have asked any question frequently enough for it to be considered an FAQ. We will update this page as soon as we have some questions to answer.
+This hasn't been around long enough for anyone to have asked any question frequently enough for it to be considered an FAQ. We will update this page as soon as we have some questions to answer.
 
 ## Should I use this instead of [cloud provider]?
 

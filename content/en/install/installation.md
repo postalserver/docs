@@ -23,6 +23,10 @@ postal bootstrap postal.yourdomain.com
 
 Once generated, you should open up `/opt/postal/config/postal.yml` and add all the appropriate values for your installation (database passwords etc...).
 
+<alert>
+Note that the docker setup mounts `/opt/postal/config` as `/config` so any full directory paths mentioned in `postal.yml` will likely need to start with `/config` and not `/opt/postal/config`
+</alert>
+
 ## Initializing the database
 
 Once you've added your configuration, you need to initialize your database by adding all the appropriate tables. Run the following commands to create the schema and then create your first admin user.
@@ -34,7 +38,7 @@ postal make-user
 
 ## Running postal
 
-You're now ready to actually run Postal itself. You can go ahead and do this by running this:
+You're now ready to actually run Postal itself. You can go ahead and do this by running:
 
 ```
 postal start
@@ -56,6 +60,6 @@ docker run -d \
    caddy
 ```
 
-Once this has started, it will issue an SSL certificate for your domain and you'll be able to immediately access the Postal web interface and login with the user you created in one of the previous steps.
+Once this has started, Caddy will issue an SSL certificate for your domain and you'll be able to immediately access the Postal web interface and login with the user you created in one of the previous steps.
 
-![Image](https://share.adam.ac/21/Screen-Shot-2021-07-29-23-26-18.23-Qwv2DD40v4jMEoaHtE.png)
+![Image](/screenshots/Screen-Shot-2021-07-29-23-26-18.23-Qwv2DD40v4jMEoaHtE.png)

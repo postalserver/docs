@@ -14,8 +14,8 @@ This API does not support managing all the functions of Postal. There are plans 
 
 ## General API Instructions
 
-* You should sent POST requests to the URLs shown below.
-* Parameters should be encoded in the body of the request and `application/json` should be set as the `Content-Type`.
+* You should send POST requests to the URLs shown below.
+* Parameters should be encoded in the body of the request and `application/json` should be set as the `Content-Type` header.
 * The response will always be provided as JSON. The status of a request can be determined from the `status` attribute in the payload you receive. It will be `success` or `error`. Further details can be found in the `data` attribute.
 
 An example response body is shown below:
@@ -31,7 +31,7 @@ An example response body is shown below:
 
 To authenticate to the API you'll need to create an API credential for your mail server through the web interface. This is a random string which is unique to your server.
 
-To authenticate to the API, you need to pass us this key in the `X-Server-API-Key` HTTP header.
+To authenticate a request to the API, you need to pass this key in the `X-Server-API-Key` HTTP header.
 
 ## Sending a message
 
@@ -46,7 +46,7 @@ For both these methods, the API will return the same information as the result. 
 
 ```javascript
 {
-  "message_id":"abcabc@amrc.appmail.io",
+  "message_id":"message-id-in-uuid-format@rp.postal.yourdomain.com",
   "messages":{
     "john@example.com":{"id":37171, "token":"a4udnay1"},
     "mary@example.com":{"id":37172, "token":"bsfhjsdfs"}

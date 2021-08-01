@@ -4,12 +4,11 @@ description: ''
 position: 3.2
 category: Features
 ---
-Postal can integrate with SpamAssassin and ClamAV to automatically scan incoming & outgoing messages that pass through mail servers.
+Postal can integrate with SpamAssassin and ClamAV to automatically scan incoming and outgoing messages that pass through mail servers.
 
 <alert type="warning">
-By default, this functionality is disabled.
+This functionality is disabled by default.
 </alert>
-
 
 ## Setting up SpamAssassin
 
@@ -39,15 +38,16 @@ spamd:
 ```
 
 ```
-postal restart
+postal stop
+postal start
 ```
 
 ### Classifying Spam
 
-The spam system is based on a numeric scoring system and different scores are assigned to different issues which may appear in a message. You can configure different thresholds which define at which point a message is treated as spam. We recommend starting at about 5 and updating this once you've seen how your incoming messages are classified.
+The spam system is based on a numeric scoring system and different scores are assigned to different issues which may appear in a message. You can configure different thresholds which define when a message is treated as spam. We recommend starting at 5 and updating this once you've seen how your incoming messages are classified.
 
-You have 3 options which can be configured on a per route basis which defines how spam messages are treated:
+You have three options which can be configured on a per route basis which defines how spam messages are treated:
 
-* **Mark** - messages will be sent through to your endpoint but there spam information will be made available to you.
+* **Mark** - messages will be sent through to your endpoint but the spam information will be made available to you.
 * **Quarantine** - the message will placed into your hold queue and you'll need to release them if you wish them to be passed to your application. They will only remain here for 7 days,
-* **Fail** - the message will be marked as failed and will simply disappear into your message history without any fuss.
+* **Fail** - the message will be marked as failed and will only be recorded in your message history without being sent.
