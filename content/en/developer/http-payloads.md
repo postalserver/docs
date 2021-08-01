@@ -9,11 +9,11 @@ One of the most useful features in Postal is the ability to have incoming messag
 
 Each endpoint has an HTTP URL (we highly recommend https) as well as a set of rules which defines how data is sent to you.
 
-* You can choose whether data is encoded as normal form data or whether we sent JSON in the body of the request.
+* You can choose whether data is encoded as normal form data or whether Postal sends JSON as the body of the request.
 * You can choose whether to receive the raw message (raw) or have it as a JSON dictionary (processed).
 * You can choose whether you'd like replies & signatures to be separated from the plain body of the message.
 
-Your server should accept our incoming message and reply within 5 seconds. It it takes longer than this, we will assume it has failed and the message will be retried. Your server should send a `200 OK` status to signal to us that you've received the message.
+Your server should accept Postals incoming request and reply within 5 seconds. If it takes longer than this, Postal will assume it has failed and the request will be retried. Your server should send a `200 OK` status to signal to Postal that you've received the request.
 
 Messages will be tried up to 18 times with an exponential back-off until a successful response is seen except in the case of `5xx` statuses which will fail immediately.
 

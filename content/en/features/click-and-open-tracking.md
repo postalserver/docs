@@ -16,7 +16,7 @@ Once enabled, Postal will automatically scan your outgoing messages and replace 
 
 ## Configuring your web server
 
-To avoid messages being marked as spam, it's important that the domain that we use in the re-written URLs is on the same domain as that sending the message. This means if you are sending mail from `example.com`, you'll need to setup `click.example.com` (or whatever you choose) to point to your Postal server.
+To avoid messages being marked as spam, it's important that the subdomain that Postal uses in the re-written URLs is on the same domain as that sending the message. This means if you are sending mail from `example.com`, you'll need to setup `click.example.com` (or whatever you choose) to point to your Postal server.
 
 You'll need to add an appropriate virtual host on your web server that proxies traffic from that domain to the Postal web server. The web server must add the `X-Postal-Track-Host: 1` header so the Postal web server knows to treat requests as tracking requests.
 

@@ -12,4 +12,4 @@ If you wish to route mail which is sent to your return path address to your appl
 
 ## A note about bounces
 
-Messages that we detect as being bounces for a message you have already sent will not be delivered to your return path route. The original message will be updated and a `MessageBounced` webhook event will be triggered.
+Messages that Postal detects as being bounces for a message you have already sent will not be delivered to your return path route. The original message will be updated and a `MessageBounced` webhook event will be triggered.

@@ -61,7 +61,7 @@ docker run -d \
 
 ## RabbitMQ
 
-RabbitMQ is responsible for dispatching messages between different processes - in our case, our workers. As with MariaDB, there are numerous ways for you to install this. For this guide, we're just going to run a single RabbitMQ worker.
+RabbitMQ is responsible for dispatching messages between different processes - in our case, the workers. As with MariaDB, there are numerous ways for you to install this. For this guide, we're just going to run a single RabbitMQ worker.
 
 ```
 docker run -d \

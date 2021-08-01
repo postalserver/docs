@@ -8,7 +8,7 @@ Postal supports the use of wildcards & address tags in routes.
 
 ## Using a wildcard
 
-Wildcards will allow you to receive all e-mail for every address on a domain. However, for most use cases, this isn't recommended because it means that large volumes of spam will be processed by your mail server that would otherwise have been rejected at the edge of our service without any cost to you.
+Wildcards will allow you to receive all e-mail for every address on a domain. However, for most use cases, this isn't recommended because it means that large volumes of spam may be processed by your mail server that would otherwise have been rejected by Postal without troubling you.
 
 Just enter `*` in the name box to create a route for this.
 

@@ -31,7 +31,7 @@ An example response body is shown below:
 
 To authenticate to the API you'll need to create an API credential for your mail server through the web interface. This is a random string which is unique to your server.
 
-To authenticate to the API, you need to pass us this key in the `X-Server-API-Key` HTTP header.
+To authenticate a request to the API, you need to pass this key in the `X-Server-API-Key` HTTP header.
 
 ## Sending a message
 
