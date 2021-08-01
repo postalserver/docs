@@ -58,6 +58,7 @@ docker run -d \
 
 * This will run a MariaDB instance and have it listen on port 3306.
 * Be sure to choose a secure password. You'll need to put this in your Postal configuration when you install it so be sure to make a (secure) note of it.
+* If you are unable or unwilling to grant root access, the database user you create separately needs all permissions on databases called `postal` and `postal-*`.
 
 ## RabbitMQ
 
