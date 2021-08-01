@@ -7,6 +7,17 @@ category: Installation
 
 In July 2021, we changed the way that Postal is installed. The only supported method for installing Postal is now using a container that we provide. To upgrade your 1.x installation to use containers is quite simple. You can follow these instructions to do it.
 
+## How do I know if I'm using Postal v1?
+
+There are a few changes between the two versions which should help identify your version.
+
+* The Postal web interface now has a footer on all pages (except the login page) which show the current version. If you have no footer, you're not using Postal v2.
+* If you installed Postal without using containers, you are most likely using Postal v1.
+* If you run `ps aux | grep procodile` and get any results, you are using Postal v1.
+* If you run `docker ps` and get no results, you are using Postal v1.
+* If you installed Postal before July 2021, you are using Postal v1.
+* If you have an `/opt/postal/app` directory you are using Postal v1 (or you have already upgraded to Postal v2 but not tidied up).
+
 ## Assumptions
 
 For the purposes of this guide, we're going to make some assumptions about your installation. If any of these assumptions are not true, you will need to determine the appropriate route for you to upgrade.

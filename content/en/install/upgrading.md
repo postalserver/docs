@@ -4,6 +4,11 @@ description: ''
 position: 2.2
 category: Installation
 ---
+
+<alert>
+If you're not currently running Postal v2, you'll need to follow the <a href="/install/upgrade-to-v2">Upgrading from 1.x</a> documentation before you can use these instructions.
+</alert>
+
 Once you have installed Postal, you can upgrade it by running this command. This will always upgrade you to the latest version of Postal that is available.
 
 ```bash
