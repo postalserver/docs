@@ -88,11 +88,6 @@ The return path domain is the default domain that is used as the `MAIL FROM` for
     </tr>
     <tr>
       <td>rp.postal.example.com</td>
-      <td>A</td>
-      <td><code>192.168.1.3</code></td>
-    </tr>
-    <tr>
-      <td>rp.postal.example.com</td>
       <td>TXT</td>
       <td><code>v=spf1 a mx include:spf.postal.example.com ~all</code></td>
     </tr>
