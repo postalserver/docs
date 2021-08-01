@@ -5,14 +5,14 @@ position: 3.0
 category: Features
 ---
 
-Postal supports tracking opens & clicks from e-mails. This allows you to see when people open messages or they click links within them.
+Postal supports tracking opens and clicks from e-mails. This allows you to see when people open messages or they click links within them.
 
 <img src="/screenshots/tracked-message.png" width="1280" alt=""/>
 
 
 ## How it works
 
-Once enabled, Postal will automatically scan your outgoing messages and replace any links & images with a new URLs that goes via your Postal web server. When the link is clicked, Postal will log the click and redirect to the user to the original URL automatically. The links that are included in the e-mail should be on the same domain as the sender and therefore you need to configure a subdomain like `click.yourdomain.com` and point it to your Postal server.
+Once enabled, Postal will automatically scan your outgoing messages and replace any links and images with new URLs that go via your Postal web server. When the link is clicked, Postal will log the click and redirect to the user to the original URL automatically. The links that are included in the e-mail should be on the same domain as the sender and therefore you need to configure a subdomain like `click.yourdomain.com` and point it to your Postal server.
 
 ## Configuring your web server
 
@@ -20,7 +20,7 @@ To avoid messages being marked as spam, it's important that the subdomain that P
 
 You'll need to add an appropriate virtual host on your web server that proxies traffic from that domain to the Postal web server. The web server must add the `X-Postal-Track-Host: 1` header so the Postal web server knows to treat requests as tracking requests.
 
-Once you have configured this, you should be able to visit your chosen domain in a browser and see `Hello.` printed back to you. If you don't see this, review your configuration until you do. If you don't see this and you enable the tracking, your messages will be sent with broken links and images.
+Once you have configured this, you should be able to visit your chosen domain in a browser and see `Hello.` printed back to you. If you don't see this, review your configuration until you do. If you still don't see this and you enable the tracking, your messages will be sent with broken links and images.
 
 If you're happy things are working, you can enable tracking as follows:
 
@@ -40,7 +40,7 @@ X-AMP: skip
 
 ## Disabling tracking for certain link domains
 
-If there are certain domains you don't wish to track links, you can define these on the tracking domain settings page. For example, if you list `yourdomain.com` no links to this domain will be tracked.
+If there are certain domains you don't wish to track links from, you can define these on the tracking domain settings page. For example, if you list `yourdomain.com` no links to this domain will be tracked.
 
 ## Disabling tracking on a per link basis
 

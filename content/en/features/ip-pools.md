@@ -4,7 +4,7 @@ description: ''
 position: 3.1
 category: Features
 ---
-Postal supports sending messages from different IP addresses. This allows you to configure certain sets of IPs for different mail servers or send from different IPs based on the sender or recipient addresess.
+Postal supports sending messages from different IP addresses. This allows you to configure certain sets of IPs for different mail servers or send from different IPs based on the sender or recipient addresses.
 
 ## Enabling IP pools
 

@@ -14,8 +14,8 @@ This API does not support managing all the functions of Postal. There are plans 
 
 ## General API Instructions
 
-* You should sent POST requests to the URLs shown below.
-* Parameters should be encoded in the body of the request and `application/json` should be set as the `Content-Type`.
+* You should send POST requests to the URLs shown below.
+* Parameters should be encoded in the body of the request and `application/json` should be set as the `Content-Type` header.
 * The response will always be provided as JSON. The status of a request can be determined from the `status` attribute in the payload you receive. It will be `success` or `error`. Further details can be found in the `data` attribute.
 
 An example response body is shown below:

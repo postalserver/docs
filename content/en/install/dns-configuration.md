@@ -4,7 +4,7 @@ description: ''
 position: 2.3
 category: Installation
 ---
-To work properly, you'll need to configure a number of DNS records for your Postal installation. Review the table below and create appropriate DNS records on your DNS server. You will need to enter the record names you choose in your `postal.yml` configuration file.
+To work properly, you'll need to configure a number of DNS records for your Postal installation. Review the table below and create appropriate DNS records with your DNS provider. You will need to enter the record names you choose in your `postal.yml` configuration file.
 
 We'll assume for the purposes of this documentation you have both IPv4 and IPv6 available to your server. We'll use the following values in this documentation, you'll need to replace them as appropriate.
 

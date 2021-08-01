@@ -5,11 +5,11 @@ position: 2.0
 category: Installation
 ---
 
-Postal is quite simple to get up and running but there are some things you'll need to do before you can install Postal.
+There are some things you'll need to do before you can install Postal.
 
 ## Servers
 
-We **strongly** recommend installing Postal on dedicated servers. The minimum specification for Postal is as follows:
+We **strongly** recommend installing Postal on its own dedicated server (i.e. a server running no other software). The minimum specification for Postal is as follows:
 
 * At least 4GB of RAM
 * At least 2 CPU cores
@@ -57,7 +57,7 @@ docker run -d \
 ```
 
 * This will run a MariaDB instance and have it listen on port 3306.
-* To be sure to choose a secure password. You'll need to put this in your Postal configuration when you install it so be sure to make a (secure) note of it.
+* Be sure to choose a secure password. You'll need to put this in your Postal configuration when you install it so be sure to make a (secure) note of it.
 
 ## RabbitMQ
 
@@ -75,4 +75,4 @@ docker run -d \
 ```
 
 * This will run a single RabbitMQ instance and have it listen on port 5672.
-* To be sure to choose a secure password. You'll need to put this in your Postal configuration when you install it so be sure to make a (secure) note of it.
+* Be sure to choose a secure password. You'll need to put this in your Postal configuration when you install it so be sure to make a (secure) note of it.

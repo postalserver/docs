@@ -7,7 +7,7 @@ category: Developer
 
 Postal supports sending webhooks over HTTP when various events occur during the lifecycle of a message.
 
-This page lists all the different types of event along with an example JSON payload that you'll receive. In many cases, only a small amount of information will be sent, if you require more information you should use the API to get obtain it.
+This page lists all the different types of event along with an example JSON payload that you'll receive. In many cases, only a small amount of information will be sent, if you require more information you should use the API to obtain it.
 
 ## Message Status Events
 

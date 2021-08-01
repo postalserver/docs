@@ -4,7 +4,7 @@ description: ''
 position: 5.1
 category: 'Other Notes'
 ---
-Postal supports the use of wildcards & address tags in routes. 
+Postal supports the use of wildcards and address tags in routes.
 
 ## Using a wildcard
 
@@ -14,4 +14,4 @@ Just enter `*` in the name box to create a route for this.
 
 ## Using address tags
 
-Postal supports the use of "tags" on e-mail addresses which means you can add a single route but still receive from multiple addresses. For example, if you add a route for `email` you will also receive messages for `email+anything@yourdomain.com` without any additional configuration. 
+Postal supports the use of "tags" on e-mail addresses which means you can add a single route but still receive from multiple addresses. For example, if you add a route for `email` you will also receive messages for `email+anything@yourdomain.com` without any additional configuration.

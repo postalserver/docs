@@ -5,13 +5,13 @@ position: 4.0
 category: Developer
 ---
 
-One of the most useful features in Postal is the ability to have incoming messages delivered to your own application as soon as they arrive. To receive incoming messages in Postal you can dispatch incoming messages to an HTTP URL of your choosing.
+One of the most useful features in Postal is the ability to have incoming messages delivered to your own application as soon as they arrive. To receive incoming messages from Postal you can set it up to pass them to an HTTP URL of your choosing.
 
-Each endpoint has an HTTP URL (we highly recommend https) as well as a set of rules which defines how data is sent to you.
+Each endpoint has an HTTP URL (we highly recommend making use of HTTPS where possible) as well as a set of rules which defines how data is sent to you.
 
 * You can choose whether data is encoded as normal form data or whether Postal sends JSON as the body of the request.
 * You can choose whether to receive the raw message (raw) or have it as a JSON dictionary (processed).
-* You can choose whether you'd like replies & signatures to be separated from the plain body of the message.
+* You can choose whether you'd like replies and signatures to be separated from the plain body of the message.
 
 Your server should accept Postals incoming request and reply within 5 seconds. If it takes longer than this, Postal will assume it has failed and the request will be retried. Your server should send a `200 OK` status to signal to Postal that you've received the request.
 
