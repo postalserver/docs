@@ -23,6 +23,10 @@ postal bootstrap postal.yourdomain.com
 
 Once generated, you should open up `/opt/postal/config/postal.yml` and add all the appropriate values for your installation (database passwords etc...).
 
+<alert>
+Note that the docker setup mounts `/opt/postal/config` as `/config` so any full directory paths mentioned in `postal.yml` will likely need to start with `/config` and not `/opt/postal/config`
+</alert>
+
 ## Initializing the database
 
 Once you've added your configuration, you need to initialize your database by adding all the appropriate tables. Run the following commands to create the schema and then create your first admin user.
