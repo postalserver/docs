@@ -15,7 +15,7 @@ We **strongly** recommend installing Postal on its own dedicated server (i.e. a 
 * At least 2 CPU cores
 * At least 100GB of disk space
 
-Most people install Postal on virtual servers. We recommend using [Katapult](https://katapult.io) for virtual servers.
+Most people install Postal on virtual servers. There are lots of providers to choose from including [Digital Ocean](https://m.do.co/c/17696597a9ed) and [Linode](https://www.linode.com).
 
 One thing to be aware of is you'll need to ensure that your provider does not block port 25 outbound. This is quite common and is used to prevent abuse from spammers.
 
