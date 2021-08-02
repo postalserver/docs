@@ -31,6 +31,22 @@ In addition to Docker, you'll also need `docker-compose`. This is an extra utili
 
 Before continuing ensure that you can run both `docker` and `docker-compose` from your prompt.
 
+## System utilties
+
+There are a few system utilities that you need to have installed before you'll be able to run some of the Postal commands.
+
+On Ubuntu/Debian:
+
+```
+apt install git curl jq
+```
+
+On CentOS/RHEL:
+
+```
+yum install git curl jq
+```
+
 ## Git & installation helper repository
 
 You'll need to make sure you have `git` installed on your server. You'll then need to clone the Postal installation helper repository. This contains some bootstrapping config and other useful things which will speed along your installation.
