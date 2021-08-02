@@ -10,9 +10,8 @@
     "test": "echo \"Error: no test specified.\""
   },
   "dependencies": {
-    "@nuxt/content-theme-docs": "^0.6.0",
+    "@nuxt/content-theme-docs": "^0.9.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "nuxt": "^2.14.6",
-    "shr-buttons": "^2.0.3"
+    "nuxt": "^2.14.6"
   }
 }
