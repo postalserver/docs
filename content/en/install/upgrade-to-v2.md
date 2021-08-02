@@ -5,7 +5,7 @@ position: 2.4
 category: Installation
 ---
 
-In July 2021, we changed the way that Postal is installed. The only supported method for installing Postal is now using a container that we provide. To upgrade your 1.x installation to use containers is quite simple. You can follow these instructions to do it.
+In July 2021, we changed the way that Postal is installed. The only supported method for installing Postal is now using a container that we provide. You can follow these instructions to upgrade your 1.x installation to use containers.
 
 ## How do I know if I'm using Postal v1?
 
@@ -43,7 +43,7 @@ There are a few extra system dependencies that you need to install.
 <b>Important:</b> use the latest versions of these rather than simply just installing the latest package available from your operating system vendor's repositories. Instructions are linked above.
 </alert>
 
-If you're running an old or unsupported version of your operating system, you may wish to use this as an opportunity to upgrade. The method for doing so is outside of the scope of these documentation.
+If you're running an old or unsupported version of your operating system, you may wish to use this as an opportunity to upgrade. The method for doing so is outside of the scope of this documentation.
 
 ## Stopping Postal
 
@@ -55,11 +55,11 @@ In Postal 2.x onwards, we no longer provide a dedicated server process for servi
 
 For all the **Tracking Domains** that you have configured (for example `track.yourdomain.com`) you will need to do the following:
 
-1. Configure a virutal host in your web proxy to route all requests for each tracking domain to the Postal web server (on port 5000).
+1. Configure a virtual host in your web proxy to route all requests for each tracking domain to the Postal web server (on port 5000).
 2. Ensure that all requests going through the proxy have the `X-Postal-Track-Host: 1` header.
 3. Issue an SSL certificate for all these hosts.
 4. Ensure that your web proxy is listening on the IP address that you previously used for the Postal `fast_server`.
-5. As there is no longer a requirement for Postal to have two IP addresses, you should update all your DNS records that reference your secondary IP to point to the main IP that you use for Postal.
+5. As there is no longer a requirement for Postal to have two IP addresses, you can update all your DNS records that reference your secondary IP to point to the main IP that you use for Postal.
 
 ## Checking configuration
 
@@ -75,7 +75,7 @@ mv /usr/bin/postal /usr/bin/postal.v1
 
 ## Installing Postal v2
 
-The first thing to do is to download the new Postal installation helpers repo and set up the new `postal` command.
+The next thing to do is to download the new Postal installation helpers repo and set up the new `postal` command.
 
 ```
 git clone https://postalserver.io/start/install /opt/postal/install
@@ -123,13 +123,13 @@ postal start
 
 ## Tidying up
 
-When you're happy that everything is running nicely, there are some things you can do:
+When you're happy that everything is running nicely, there are some final things you should do:
 
 * Remove `/opt/postal/app`. This is where the application itself lived and is no longer required.
 * Remove `/opt/postal/log`. Logs are no longer stored here.
 * Remove `/opt/postal/vendor`. This is no longer used.
 * Remove the backup Postal helper tool from `/usr/bin/postal.v1`.
-* After a period of time to allow DNS updates to apply, you can remove the additional IP from the server.
+* If you changed any tracking domains to use your main IP address, you can remove the additional IP from the server after checking that all DNS updates have applied.
 
 ## Installing on a new server with existing data
 
@@ -140,7 +140,7 @@ If you want to simply install Postal on a new server and copy your data over, yo
 3. On your new server, stop Postal using `postal stop`.
 4. Use whatever tool takes your fancy (`mysqldump`, `Mariabackup` etc...) to copy your databases to your new server. Make sure you copy the `postal` database as well as all other databases prefixed with `postal` (or whatever you have configured your prefix to be in the `message_db` part of your configuration).
 5. Ensure that your `postal.yml` is merged appropriately. For example, make sure your `dns` section is correct. There is no need to copy the `rails.secret` - a new secret on the new host won't be a problem.
-6. If you stop Postal cleanly before beginning, there is no need to copy any persisted data from RabbitMQ.
+6. If you stopped Postal cleanly before beginning, there is no need to copy any persisted data from RabbitMQ.
 7. Shutdown your old Postal server.
-8. Move the IP address(es) from the old server to the new one.
+8. Move the IP address(es) from the old server to the new one (if both old and new servers are with the same provider).
 9. Start Postal on the new server using `postal start`.
