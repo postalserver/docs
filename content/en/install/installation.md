@@ -9,17 +9,19 @@ Once you've completed all the [prerequisites](./prerequisites), you can go ahead
 
 ## Configuration
 
-Before you can start Postal, you'll need some configuration. The repository you cloned includes a tool to automatically generate some initial configuration files. This will generate three files in `/opt/postal/config`.
+Before you can start Postal, you'll need some configuration. The repository you cloned includes a tool to automatically generate some initial configuration files.
 
-* `postal.yml` is the main postal configuration file
-* `signing.key` is the private key used to sign various things in Postal
-* `Caddyfile` is the configuration for the Caddy webserver
-
-Run the command below and replace `postal.yourdomain.com` with the actual hostname you want to access your Postal web interface at. Make sure you have set up this domain in your DNS before continuing.
+Run the command below and replace `postal.yourdomain.com` with the actual hostname you want to access your Postal web interface at. Make sure you have set up this domain with your DNS provider before continuing.
 
 ```
 postal bootstrap postal.yourdomain.com
 ```
+
+This will generate three files in `/opt/postal/config`.
+
+* `postal.yml` is the main postal configuration file
+* `signing.key` is the private key used to sign various things in Postal
+* `Caddyfile` is the configuration for the Caddy webserver
 
 Once generated, you should open up `/opt/postal/config/postal.yml` and add all the appropriate values for your installation (database passwords etc...).
 
