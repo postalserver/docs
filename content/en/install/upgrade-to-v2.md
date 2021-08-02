@@ -116,7 +116,7 @@ If something goes wrong and you need to rollback to the previous version you can
 
 ```
 postal stop
-rm /usr/bin/postal
+unlink /usr/bin/postal
 mv /usr/bin/postal.v1 /usr/bin/postal
 postal start
 ```
