@@ -1,6 +1,6 @@
 ---
 title: Upgrading from 1.x
-description: ''
+description: ""
 position: 2.4
 category: Installation
 ---
@@ -11,22 +11,22 @@ In July 2021, we changed the way that Postal is installed. The only supported me
 
 There are a few changes between the two versions which should help identify your version.
 
-* The Postal web interface now has a footer on all pages (except the login page) which show the current version. If you have no footer, you're not using Postal v2.
-* If you installed Postal without using containers, you are most likely using Postal v1.
-* If you run `ps aux | grep procodile` and get any results, you are using Postal v1.
-* If you run `docker ps` and get no results, you are using Postal v1.
-* If you installed Postal before July 2021, you are using Postal v1.
-* If you have an `/opt/postal/app` directory you are using Postal v1 (or you have already upgraded to Postal v2 but not tidied up).
+- The Postal web interface now has a footer on all pages (except the login page) which show the current version. If you have no footer, you're not using Postal v2.
+- If you installed Postal without using containers, you are most likely using Postal v1.
+- If you run `ps aux | grep procodile` and get any results, you are using Postal v1.
+- If you run `docker ps` and get no results, you are using Postal v1.
+- If you installed Postal before July 2021, you are using Postal v1.
+- If you have an `/opt/postal/app` directory you are using Postal v1 (or you have already upgraded to Postal v2 but not tidied up).
 
 ## Assumptions
 
 For the purposes of this guide, we're going to make some assumptions about your installation. If any of these assumptions are not true, you will need to determine the appropriate route for you to upgrade.
 
-* You have Postal installed on a single server.
-* Your server has a MariaDB (or MySQL) database server running on it and listening port 3306.
-* Your server has a RabbitMQ server running on it and listening on port 5672.
-* Your current installation is located at `/opt/postal` and your configuration is in `/opt/postal/config`.
-* You use a web proxy (such as nginx, Caddy or Apache) in front of the Postal web server.
+- You have Postal installed on a single server.
+- Your server has a MariaDB (or MySQL) database server running on it and listening port 3306.
+- Your server has a RabbitMQ server running on it and listening on port 5672.
+- Your current installation is located at `/opt/postal` and your configuration is in `/opt/postal/config`.
+- You use a web proxy (such as nginx, Caddy or Apache) in front of the Postal web server.
 
 <alert>
 Performing this upgrade will mean that your Postal services will be unavailable for a short period of time. We recommend scheduling some maintenance and performing the upgrade when traffic is low.
@@ -36,8 +36,8 @@ Performing this upgrade will mean that your Postal services will be unavailable 
 
 There are a few extra system dependencies that you need to install.
 
-* [Docker](https://docs.docker.com/get-docker/)
-* [docker-compose](https://docs.docker.com/compose/install/)
+- [Docker](https://docs.docker.com/get-docker/)
+- [docker-compose](https://docs.docker.com/compose/install/)
 
 <alert type="warning">
 <b>Important:</b> use the latest versions of these rather than simply just installing the latest package available from your operating system vendor's repositories. Instructions are linked above.
@@ -63,7 +63,27 @@ For all the **Tracking Domains** that you have configured (for example `track.yo
 
 ## Checking configuration
 
-There is no need to move any of your configuration files because Postal still expects them to exist at `/opt/postal/config`.
+Your existing configuration for Postal can remain in the same place as it was before at `/opt/postal/config`. If you have referenced any other files in your `postal.yml`, you will need to ensure that these files are within the `/opt/postal/config` folder and you replace the path with `/config`. For example, if you have this:
+
+```yaml
+smtp_server:
+  tls_enabled: true
+  tls_certificate_path: /opt/postal/config/smtp.crt
+  tls_private_key_path: /opt/postal/config/smtp.key
+```
+
+You will need to update `/opt/postal/config` to `/config` as follows:
+
+```yaml
+smtp_server:
+  tls_enabled: true
+  tls_certificate_path: /config/smtp.crt
+  tls_private_key_path: /config/smtp.key
+```
+
+<alert type="warning">
+<b>Important:</b> if you have referenced files in other parts of your operating system (such as in <code>/etc</code>), you must ensure these are now within the `/opt/postal/config` directory otherwise they won't be available within the container that Postal runs within.
+</alert>
 
 ## Removing the old Postal helper script
 
@@ -125,11 +145,11 @@ postal start
 
 When you're happy that everything is running nicely, there are some final things you should do:
 
-* Remove `/opt/postal/app`. This is where the application itself lived and is no longer required.
-* Remove `/opt/postal/log`. Logs are no longer stored here.
-* Remove `/opt/postal/vendor`. This is no longer used.
-* Remove the backup Postal helper tool from `/usr/bin/postal.v1`.
-* If you changed any tracking domains to use your main IP address, you can remove the additional IP from the server after checking that all DNS updates have applied.
+- Remove `/opt/postal/app`. This is where the application itself lived and is no longer required.
+- Remove `/opt/postal/log`. Logs are no longer stored here.
+- Remove `/opt/postal/vendor`. This is no longer used.
+- Remove the backup Postal helper tool from `/usr/bin/postal.v1`.
+- If you changed any tracking domains to use your main IP address, you can remove the additional IP from the server after checking that all DNS updates have applied.
 
 ## Installing on a new server with existing data
 
