@@ -31,7 +31,7 @@ In addition to Docker, you'll also need `docker-compose`. This is an extra utili
 
 Before continuing ensure that you can run both `docker` and `docker-compose` from your prompt.
 
-## System utilties
+## System utilities
 
 There are a few system utilities that you need to have installed before you'll be able to run some of the Postal commands.
 
