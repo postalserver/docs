@@ -22,4 +22,4 @@ You can run your message through something like [Mail Tester](https://www.mail-t
 
 ## Can you add [mailing list feature]?
 
-No. Postal is a mail transport agent and not a mailing list manager. We don't want to add features that a better suited in another application, for example, address books or handling the un-subscription of people from a database.
+No. Postal is a mail transport agent and not a mailing list manager. We don't want to add features that are better suited in another application, for example, address books or handling the un-subscription of people from a database.
