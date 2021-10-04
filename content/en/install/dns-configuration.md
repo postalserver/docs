@@ -123,7 +123,7 @@ If you wish to receive incoming e-mail by forwarding messages directly to routes
 
 ## Example Postal Configuration
 
-In your `postal.yml` you should have something like that looks like the below,.
+In your `postal.yml` you should have something that looks like the below:
 
 ```yaml
 dns:
