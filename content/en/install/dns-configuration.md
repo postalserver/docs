@@ -78,13 +78,8 @@ The return path domain is the default domain that is used as the `MAIL FROM` for
   <tbody>
     <tr>
       <td>rp.postal.example.com</td>
-      <td>A</td>
-      <td><code>192.168.1.3</code></td>
-    </tr>
-    <tr>
-      <td>rp.postal.example.com</td>
-      <td>AAAA</td>
-      <td><code>2a00:1234:abcd:1::3</code></td>
+      <td>MX</td>
+      <td><code>10 postal.example.com</code></td>
     </tr>
     <tr>
       <td>rp.postal.example.com</td>
