@@ -78,6 +78,6 @@ If you are not using IP pools, there is no need to use host networking and you c
 
 ## Waiting for services
 
-The container's entrypoint supports waiting for external services to be ready before starting the underlying process. To use this you need to set the ``WAIT_FOR_TARGETS` environment variable with a list of services and ports. For example, `mariadb:3306`, replacing `mariadb` with the hostname or IP of your MariaDB server. You can specify multiple endpoint by separating them with a space.
+The container's entrypoint supports waiting for external services to be ready before starting the underlying process. To use this you need to set the `WAIT_FOR_TARGETS` environment variable with a list of services and ports. For example, `mariadb:3306`, replacing `mariadb` with the hostname or IP of your MariaDB server. You can specify multiple endpoint by separating them with a space.
 
 The default maximum time to wait is 30 seconds, you can override this using the `WAIT_FOR_TIMEOUT` environment variable.
