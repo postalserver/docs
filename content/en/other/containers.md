@@ -62,7 +62,7 @@ Be sure to configure your system to only allow a single <code>cron</code> and <c
 
 ## Configuration
 
-The image exists all configuration to be mounted at `/config`. At a minimum, this directory must contain a `postal.yml` and a `signing.key`. You can see an example `postal.yml` in the [installation tool repository](https://github.com/postalserver/install/blob/main/examples/postal.yml).
+The image expects all configuration to be mounted at `/config`. At a minimum, this directory must contain a `postal.yml` and a `signing.key`. You can see an example `postal.yml` in the [installation tool repository](https://github.com/postalserver/install/blob/main/examples/postal.yml).
 
 The `signing.key` can be generated using the following command:
 
@@ -72,7 +72,7 @@ openssl genrsa -out path/to/signing.key 2018
 
 ## Networking
 
-If you wish to utilise IP pools, you will need to run Postal using host networking. This is because Postal will need to be able to determine which physical IPs are available to it and be able to send and receiving traffic on those IPs.
+If you wish to utilise IP pools, you will need to run Postal using host networking. This is because Postal will need to be able to determine which physical IPs are available to it and be able to send and receive traffic on those IPs.
 
 If you are not using IP pools, there is no need to use host networking and you can expose the ports listed above as appropriate.
 
