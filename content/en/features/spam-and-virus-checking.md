@@ -20,7 +20,11 @@ By default, Postal will talk to SpamAssassin's `spamd` using an TCP socket conne
 sudo apt install spamassassin
 ```
 
-Once you have installed this, you will need to open up `/etc/default/spamassassin` and change `ENABLED` to `1` and  `CRON` to `1`. Then you should restart SpamAssassin.
+Once you have installed this, you will need to open up `/etc/default/spamassassin` and change `ENABLED` to `1` and  `CRON` to `1`. On some systems (such as Ubuntu 20 or newer), you might need to enable the SpamAssassin daemon with the following command.
+```
+update-rc.d spamassassin enable
+```
+Then you should restart SpamAssassin.
 
 ```
 sudo systemctl restart spamassassin
