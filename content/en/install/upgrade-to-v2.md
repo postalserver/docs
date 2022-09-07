@@ -163,4 +163,5 @@ If you want to simply install Postal on a new server and copy your data over, yo
 6. If you stopped Postal cleanly before beginning, there is no need to copy any persisted data from RabbitMQ.
 7. Shutdown your old Postal server.
 8. Move the IP address(es) from the old server to the new one (if both old and new servers are with the same provider).
-9. Start Postal on the new server using `postal start`.
+9. Run a normal upgrade using the new Postal command line helper. This will run a new image to upgrade your database schema to that required for Postal v2. `postal upgrade`.
+10. Start Postal on the new server using `postal start`.
