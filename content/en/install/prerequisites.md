@@ -11,9 +11,9 @@ There are some things you'll need to do before you can install Postal.
 
 We **strongly** recommend installing Postal on its own dedicated server (i.e. a server running no other software). The minimum specification for Postal is as follows:
 
-* At least 4GB of RAM
+* At least 2GB of RAM
 * At least 2 CPU cores
-* At least 100GB of disk space
+* At least 50GB of disk space
 
 Most people install Postal on virtual servers. There are lots of providers to choose from including [Digital Ocean](https://m.do.co/c/17696597a9ed) and [Linode](https://www.linode.com).
 
