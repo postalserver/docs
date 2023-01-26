@@ -5,7 +5,7 @@ position: 2.1
 category: Installation
 ---
 
-Once you've completed all the [prerequisites](./prerequisites), you can go ahead and start to install Postal.
+Once you've completed all the [prerequisites](../prerequisites), you can go ahead and start to install Postal.
 
 ## Configuration
 
