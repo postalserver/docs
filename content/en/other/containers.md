@@ -62,7 +62,7 @@ Be sure to configure your system to only allow a single <code>cron</code> and <c
 
 ## Configuration
 
-The image exists all configuration to be mounted at `/config`. At a minimum, this directory must contain a `postal.yml` and a `signing.key`. You can see an example `postal.yml` in the [installation tool repository](https://github.com/postalserver/install/blob/main/examples/postal.yml).
+The image expects all configuration to be mounted at `/config`. At a minimum, this directory must contain a `postal.yml` and a `signing.key`. You can see an example `postal.yml` in the [installation tool repository](https://github.com/postalserver/install/blob/main/examples/postal.yml).
 
 The `signing.key` can be generated using the following command:
 
