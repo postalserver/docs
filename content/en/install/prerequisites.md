@@ -31,7 +31,7 @@ In addition to Docker, you'll also need `docker-compose`. This is an extra utili
 
 Before continuing ensure that you can run both `docker` and `docker-compose` from your prompt.
 
-## System utilties
+## System utilities
 
 There are a few system utilities that you need to have installed before you'll be able to run some of the Postal commands.
 
@@ -75,6 +75,10 @@ docker run -d \
 * This will run a MariaDB instance and have it listen on port 3306.
 * Be sure to choose a secure password. You'll need to put this in your Postal configuration when you install it so be sure to make a (secure) note of it.
 * If you are unable or unwilling to grant root access, the database user you create separately needs all permissions on databases called `postal` and `postal-*` (this prefix can be configured in the `message_db` part of your configuration).
+
+<alert>
+Whilst you can configure the maximum message size however you wish, you will need to verify that MariaDB is configured with <code>innodb_log_file_size</code> to at least 10 times the biggest message you wish to send (150MB for 15MB email, 250MB for 25MB email, etc).<br><br>If you have a legacy v1 database you might also want to check that raw tables in the database have the type <code>LONGBLOB</code>.
+</alert>
 
 ## RabbitMQ
 
