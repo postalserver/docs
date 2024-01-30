@@ -13,6 +13,7 @@ There are a number of client libraries available to help send e-mail using the P
 * [PHP](https://github.com/postalserver/postal-php)
 * [Node](https://github.com/postalserver/postal-node)
 * [Java](https://github.com/matthewmgamble/postal-java)
+* [Go](https://github.com/Pacerino/postal-go)
 
 All of these libraries will make use of the API rather than using any SMTP protocol - this is considered to be best approach for delivering your messages.
 
