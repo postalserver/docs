@@ -159,7 +159,7 @@ If you want to simply install Postal on a new server and copy your data over, yo
 2. On your old server, stop Postal using `postal stop`. Make sure it has fully stopped before continuing using `postal status`.
 3. On your new server, stop Postal using `postal stop`.
 4. Use whatever tool takes your fancy (`mysqldump`, `Mariabackup` etc...) to copy your databases to your new server. Make sure you copy the `postal` database as well as all other databases prefixed with `postal` (or whatever you have configured your prefix to be in the `message_db` part of your configuration).
-5. On the new server, run `docker exec -t postal-web-1 bin/rails db:migrate` to update the copied database with the changed table structures
+5. On the new server, run `postal upgrade-db` to update the copied database with the changed table structures
 6. Ensure that your `postal.yml` is merged appropriately. For example, make sure your `dns` section is correct. There is no need to copy the `rails.secret` - a new secret on the new host won't be a problem.
 7. If you stopped Postal cleanly before beginning, there is no need to copy any persisted data from RabbitMQ.
 8. Shutdown your old Postal server.
