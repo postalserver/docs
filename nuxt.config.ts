@@ -1,12 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
-  site: {
-    // production URL
-    url: 'https://docs.postalserver.io/',
-  },
-
-
   extends: ["@nuxt/ui-pro"],
   modules: [
     "@nuxt/content",
