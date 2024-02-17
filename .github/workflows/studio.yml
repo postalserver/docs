@@ -22,7 +22,7 @@ concurrency:
 
 jobs:
   # Build job
-  build-and-deploy:
+  build-and-deploy:    
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -71,6 +71,7 @@ jobs:
         env:
           NUXT_PUBLIC_STUDIO_API_URL: https://api.nuxt.studio
           NUXT_PUBLIC_STUDIO_TOKENS: 4c3b258f4ce46624ef221779f4280310cb6214c0089b3770eae859f00a802c44
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 
 
       # Deployment job
