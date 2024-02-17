@@ -31,8 +31,8 @@ export default defineAppConfig({
   },
   footer: {
     credits: {
-      label: "Built with Nuxt UI",
-      to: "https://ui.nuxt.com",
+      label: "Built with Nuxt UI Pro",
+      to: "https://ui.nuxt.com/pro",
     },
     colorMode: false,
     links: [

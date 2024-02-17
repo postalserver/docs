@@ -6,8 +6,8 @@ hero:
   description: 'A fully featured open source mail delivery platform for incoming & outgoing e-mail'
   orientation: horizontal
   headline:
-    label: Made with Nuxt UI Pro
-    to: https://ui.nuxt.com/pro
+    label: V3 Roadmap
+    to: https://github.com/postalserver/postal/pull/2803
     icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
     - label: Get started
@@ -28,12 +28,11 @@ hero:
 features:
   title: 'All-in-one docs template'
   links:
-    - label: 'Explore Nuxt UI Pro'
+    - label: 'Discover all the features'
       icon: 'i-simple-icons-nuxtdotjs'
       trailingIcon: 'i-heroicons-arrow-right-20-solid'
       color: 'gray'
-      to: 'https://ui.nuxt.com/pro'
-      target: '_blank'
+      to: '/welcome/feature-list'
       size: lg
   items:
     - title: 'Nuxt 3'
