@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const { footer } = useAppConfig()
+const { footer } = useAppConfig();
 </script>
 
 <template>
   <UFooter>
     <template #left>
-      {{ footer.credits }}
+      <NuxtLink :to="footer.credits.to"> {{ footer.credits.label }}</NuxtLink>
     </template>
 
     <template #right>
