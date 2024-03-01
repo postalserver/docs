@@ -46,7 +46,7 @@ pnpm install
 Start the development server on http://localhost:3000
 
 > [!NOTE]
-> If you see a warning about a "Missing `NUXT_UI_PRO_LICENSE`"", you can ignore that message. This is only used in production.
+> If you see a warning about a "Missing `NUXT_UI_PRO_LICENSE`", you can ignore that message. This is only used in production.
 
 ```bash
 pnpm dev
