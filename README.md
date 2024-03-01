@@ -1,7 +1,6 @@
 # View the site
 👉 See the live documentation site at https://docs.postalserver.io
 
-
 # Postal Server Documentation
 [Postal is a complete and fully featured mail server](https://postal.atech.media/) for use by websites & web servers. Think Sendgrid, Mailgun or Postmark but open source and ready for you to run on your own servers. Postal was developed by aTech Media to serve its own mail processing requirements and we have since decided that it should be released as an open source project for the community. It was originally launched by us as AppMail but renamed to Postal as part of making it open source as we felt the name was more suitable.
 
@@ -13,48 +12,44 @@ Contributions are welcome! Please open up a pull request that clearly describes 
 
 This site runs on [Nuxt Content](https://content.nuxtjs.org/). Please review their docs for how this framework works.
 
-### Installing on your local machine
+# Local Development Setup
+Follow these steps to get the site running on your local machine.
 
-If you'd like to run this site locally on your machine, follow these steps:
+### Prerequisites
+- Node installed with a working [NVM installation](https://github.com/nvm-sh/nvm)
+- [PNPM installed](https://pnpm.io/installation) for package management
 
-#### Docker usage
-In an effort to keep our Node versions the same, we have a `docker-compose.yml` file that will prepare your development environment for you. We encourage you to use this even if you have NPM installed on your machine. This will guarantee we have the same version across everyone's computer.
+### Prepare your system
+Assuming you have NVM installed, ensure you're using the project's Node version.
 
-#### Setup
+**Change to the project directory**
+```bash
+cd /path/to/postal-docs
+```
 
-Install dependencies:
+**Install the correct Node version**
+```bash
+nvm install
+```
+
+**Use the correct Node version**
+```bash
+nvm use
+```
+
+### Install dependencies
+Install the Node dependencies using PNPM.
+```bash
+pnpm install
+```
+### Start the development web server
+Start the development server on http://localhost:3000
+
+> [!NOTE]
+> If you see a warning about a "Missing `NUXT_UI_PRO_LICENSE`"", you can ignore that message. This is only used in production.
 
 ```bash
-docker compose run node yarn install
+pnpm dev
 ```
 
-#### Running the docs site in development
-
-```bash
-docker compose pull && docker compose up
-```
-
-Wait for your machine to complete the build, then your development copy will be available at http://localhost:3000
-
-### Managing content
-
-#### Content Location
-All content is located under the `/content` folder, followed by the language. You will find the markdown files in there.
-
-#### Organizing Pages
-Everything is organized by ["front matter" and Nuxt Content](https://content.nuxtjs.org/themes/docs#front-matter).
-
-Make sure you are setting your `position` and `category` fields correctly. For example:
-```yaml
----
-title: My 2nd Page Title
-description: ''
-position: 1.1
-category: My Category
----
-```
-The above result would look like this:
-<p align="center">
-	<img src="https://raw.githubusercontent.com/postalserver/docs/main/static/docs-category-and-postion.png">
-</p>
-
+Your local development environment is now running. You can view the site at http://localhost:3000. Any changes you make to the content will be automatically reflected in the browser once you save the file.
