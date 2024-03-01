@@ -51,8 +51,8 @@ defineOgImage({
       </template>
 
       <UColorModeImage
-        light="https://docs.postalserver.io/screenshot.png"
-        dark="https://docs.postalserver.io/screenshot.png"
+        light="/screenshot.png"
+        dark="/screenshot.png"
       />
     </ULandingHero>
 
