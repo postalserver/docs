@@ -1,13 +1,13 @@
-title: 'Postal Mail'
+title: 'Postal Server'
 description: 'A fully featured open source mail delivery platform for incoming & outgoing e-mail'
 navigation: false
 hero:
-  title: 'Postal Mail'
-  description: 'A fully featured open source mail delivery platform for incoming & outgoing e-mail'
+  title: 'Postal Server'
+  description: 'Postal is a complete and fully featured mail server for use by websites & web servers. Think Sendgrid, Mailgun or Postmark but open source and ready for you to run on your own servers.'
   orientation: horizontal
   headline:
-    label: V3 Roadmap
-    to: https://github.com/postalserver/postal/pull/2803
+    label: Discussions
+    to: https://github.com/orgs/postalserver/discussions
     icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
     - label: Get started
@@ -21,12 +21,10 @@ hero:
       color: gray
       to: https://github.com/postalserver/postal
       target: _blank
-  code: |
-    ```bash [Terminal]
-    npx nuxi init -t github:nuxt-ui-pro/docs
-    ```
+
+
 features:
-  title: 'All-in-one docs template'
+  title: 'Easy to get up and running'
   links:
     - label: 'Discover all the features'
       icon: 'i-simple-icons-nuxtdotjs'
@@ -35,33 +33,22 @@ features:
       to: '/welcome/feature-list'
       size: lg
   items:
-    - title: 'Nuxt 3'
-      description: 'Powered by Nuxt 3 for optimal performances and SEO.'
-      icon: 'i-simple-icons-nuxtdotjs'
-      to: 'https://nuxt.com'
+    - title: 'Comprehensive Web Interface'
+      description: 'Manage your mail servers and view mail logs through an easy to user web interface.'
+      icon: 'i-heroicons-window-20-solid'
+    - title: 'Scalable'
+      description: 'Easily horizontally scale your mail service up and down as needed.'
+      icon: 'i-heroicons-arrows-pointing-out-16-solid'
       target: '_blank'
-    - title: 'Markdown'
-      description: 'Write your pages with MDC thanks to Nuxt Content.'
-      icon: 'i-simple-icons-markdown'
-      to: 'https://content.nuxt.com'
-      target: '_blank'
-    - title: 'Nuxt UI'
-      description: 'Offers a very large set of full customizable components.'
-      icon: 'i-heroicons-sparkles-20-solid'
-      to: 'https://ui.nuxt.com'
-      target: '_blank'
-    - title: 'TypeScript'
-      description: 'A fully typed development experience.'
-      icon: 'i-simple-icons-typescript'
-      to: 'https://www.typescriptlang.org'
-      target: '_blank'
-    - title: 'Nuxt Studio'
-      description: 'Supported by Nuxt Studio for fast updates and previews.'
-      icon: 'i-simple-icons-nuxtdotjs'
-      to: 'https://nuxt.studio'
-      target: '_blank'
-    - title: 'Search'
-      description: 'A full-text search modal empowered by Fuse.js.'
-      icon: 'i-heroicons-magnifying-glass-20-solid'
-      to: 'https://ui.nuxt.com/pro/components/docs/docs-search'
-      target: '_blank'
+    - title: 'Webhooks'
+      description: 'Set up webhooks to notify HTTP endpoints when messages are delivered or have issues.'
+      icon: 'i-envelope-open-20-solid'
+    - title: 'Development Mode'
+      description: 'Automatically hold messages in Postal as needed to handle testing during development.'
+      icon: 'i-adjustments-vertical-20-solid'
+    - title: 'IP Pools'
+      description: 'Send mail from different IP addresses to help build and maintain good IP reputation.'
+      icon: 'i-arrow-path-rounded-square-16-solid'
+    - title: 'Spam & anti-virus integrations'
+      description: 'Integrate with SpamAssassin, rspamd and ClamAV to have incoming & outgoing messages checked for threats and spam.'
+      icon: 'i-heroicons-trash-solid'
