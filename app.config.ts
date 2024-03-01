@@ -23,7 +23,7 @@ export default defineAppConfig({
     links: [
       {
         icon: "i-simple-icons-github",
-        to: "https://github.com/nuxt-ui-pro/docs",
+        to: "https://github.com/postalserver",
         target: "_blank",
         "aria-label": "Docs template on GitHub",
       },
