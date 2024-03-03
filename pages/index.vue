@@ -15,11 +15,16 @@ defineOgImage({
   title: page.value.title,
   description: page.value.description,
 });
+
+const ui = {
+  wrapper: "py-12 sm:py-24 md:pt-24 md:pb-2 relative",
+}
 </script>
 
 <template>
   <div>
-    <ULandingHero v-if="page.hero" v-bind="page.hero">
+    
+    <ULandingHero :ui="ui" v-if="page.hero" v-bind="page.hero">
       <template #headline>
         <UBadge
           v-if="page.hero.headline"
@@ -27,6 +32,12 @@ defineOgImage({
           size="lg"
           class="relative rounded-full font-semibold"
         >
+          <UIcon
+              v-if="page.hero.headline.icon"
+              :name="page.hero.headline.icon"
+              class="mr-2 w-5 h-5 pointer-events-none"
+            />
+
           <NuxtLink
             :to="page.hero.headline.to"
             target="_blank"
@@ -38,11 +49,6 @@ defineOgImage({
 
           {{ page.hero.headline.label }}
 
-          <UIcon
-            v-if="page.hero.headline.icon"
-            :name="page.hero.headline.icon"
-            class="ml-1 w-4 h-4 pointer-events-none"
-          />
         </UBadge>
       </template>
 

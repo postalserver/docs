@@ -1,7 +1,7 @@
 export default defineAppConfig({
   ui: {
-    primary: "blue",
-    gray: "slate",
+    primary: "orange",
+    gray: "brown",
     footer: {
       bottom: {
         left: "text-sm text-gray-500 dark:text-gray-400",
@@ -10,23 +10,29 @@ export default defineAppConfig({
     },
   },
   seo: {
-    siteName: "Postal - The Mail Delivery Service",
+    siteName: "Postal Server - the open source mail server",
   },
   header: {
     logo: {
-      alt: "postak logo",
+      alt: "Postal",
       light: "/logo-light.svg",
       dark: "/logo-dark.svg",
     },
     search: true,
-    colorMode: true,
     links: [
       {
-        icon: "i-simple-icons-github",
+        label: "Docs",
+        to: "/getting-started/prerequisites",
+        "aria-label": "Docs",
+      },
+      {
+        label: "Code",
         to: "https://github.com/postalserver",
         target: "_blank",
-        "aria-label": "Docs template on GitHub",
+        "aria-label": "Postal on GitHub",
       },
+      
+
     ],
   },
   footer: {
@@ -34,26 +40,20 @@ export default defineAppConfig({
       label: "Built with Nuxt UI Pro",
       to: "https://ui.nuxt.com/pro",
     },
-    colorMode: false,
+    colorMode: true,
     links: [
-/*       {
-        icon: "i-simple-icons-nuxtdotjs",
-        to: "https://nuxt.com",
-        target: "_blank",
-        "aria-label": "Nuxt Website",
-      },
       {
         icon: "i-simple-icons-discord",
-        to: "https://discord.com/invite/ps2h6QT",
+        to: "https://discord.postalserrver.com",
         target: "_blank",
-        "aria-label": "Nuxt UI on Discord",
+        "aria-label": "Postal on Discord",
       },
       {
         icon: "i-simple-icons-x",
-        to: "https://x.com/nuxt_js",
+        to: "https://x.com/postalserverio",
         target: "_blank",
-        "aria-label": "Nuxt on X",
-      }, */
+        "aria-label": "Postal on X",
+      }, 
       {
         icon: "i-simple-icons-github",
         to: "https://github.com/postalserver/postal",
@@ -64,6 +64,7 @@ export default defineAppConfig({
   },
   toc: {
     title: "Table of Contents",
+
     bottom: {
       title: "Community",
       edit: "https://github.com/postalserver/docs/tree/main/content",

@@ -6,9 +6,9 @@ hero:
   description: 'Postal is a complete and fully featured mail server for use by websites & web servers. Think Sendgrid, Mailgun or Postmark but open source and ready for you to run on your own servers.'
   orientation: horizontal
   headline:
-    label: Discussions
-    to: https://github.com/orgs/postalserver/discussions
-    icon: i-heroicons-arrow-top-right-on-square-20-solid
+    label: Join us on Discord
+    to: https://discord.postalserver.io
+    icon: i-simple-icons-discord
   links:
     - label: Get started
       icon: i-heroicons-arrow-right-20-solid
@@ -22,12 +22,10 @@ hero:
       to: https://github.com/postalserver/postal
       target: _blank
 
-
 features:
   title: 'Easy to get up and running'
   links:
-    - label: 'Discover all the features'
-      icon: 'i-simple-icons-nuxtdotjs'
+    - label: 'Discover more features'
       trailingIcon: 'i-heroicons-arrow-right-20-solid'
       color: 'gray'
       to: '/welcome/feature-list'
