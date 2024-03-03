@@ -37,8 +37,8 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/api/search.json": { prerender: true },
-    "/getting-started": {
-      redirect: { to: "/welcome/feature-list", statusCode: 301 },
+    "/docs": {
+      redirect: { to: "/welcome/feature-list", statusCode: 302 },
     },
   },
   devtools: {

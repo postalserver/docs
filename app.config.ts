@@ -1,7 +1,7 @@
 export default defineAppConfig({
   ui: {
     primary: "orange",
-    gray: "brown",
+    gray: "slate",
     footer: {
       bottom: {
         left: "text-sm text-gray-500 dark:text-gray-400",
@@ -10,7 +10,7 @@ export default defineAppConfig({
     },
   },
   seo: {
-    siteName: "Postal Server - the open source mail server",
+    siteName: "Postal - the open source mail delivery platform",
   },
   header: {
     logo: {
@@ -22,11 +22,13 @@ export default defineAppConfig({
     links: [
       {
         label: "Docs",
-        to: "/getting-started/prerequisites",
+        to: "/docs",
+        icon: "i-heroicons-book-open-solid",
         "aria-label": "Docs",
       },
       {
         label: "Code",
+        icon: "i-simple-icons-github",
         to: "https://github.com/postalserver",
         target: "_blank",
         "aria-label": "Postal on GitHub",

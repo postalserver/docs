@@ -1,29 +1,6 @@
-title: 'Postal Server'
+title: 'Postal - an open source mail delivery platform'
 description: 'A fully featured open source mail delivery platform for incoming & outgoing e-mail'
-navigation: false
-hero:
-  title: 'Postal Server'
-  description: 'Postal is a complete and fully featured mail server for use by websites & web servers. Think Sendgrid, Mailgun or Postmark but open source and ready for you to run on your own servers.'
-  orientation: horizontal
-  headline:
-    label: Join us on Discord
-    to: https://discord.postalserver.io
-    icon: i-simple-icons-discord
-  links:
-    - label: Get started
-      icon: i-heroicons-arrow-right-20-solid
-      trailing: true
-      to: '/getting-started/prerequisites'
-      size: lg
-    - label: Check on GitHub
-      icon: i-simple-icons-github
-      size: lg
-      color: gray
-      to: https://github.com/postalserver/postal
-      target: _blank
-
 features:
-  title: 'Easy to get up and running'
   links:
     - label: 'Discover more features'
       trailingIcon: 'i-heroicons-arrow-right-20-solid'
