@@ -1,0 +1,54 @@
+title: 'Postal Server'
+description: 'A fully featured open source mail delivery platform for incoming & outgoing e-mail'
+navigation: false
+hero:
+  title: 'Postal Server'
+  description: 'Postal is a complete and fully featured mail server for use by websites & web servers. Think Sendgrid, Mailgun or Postmark but open source and ready for you to run on your own servers.'
+  orientation: horizontal
+  headline:
+    label: Discussions
+    to: https://github.com/orgs/postalserver/discussions
+    icon: i-heroicons-arrow-top-right-on-square-20-solid
+  links:
+    - label: Get started
+      icon: i-heroicons-arrow-right-20-solid
+      trailing: true
+      to: '/getting-started/prerequisites'
+      size: lg
+    - label: Check on GitHub
+      icon: i-simple-icons-github
+      size: lg
+      color: gray
+      to: https://github.com/postalserver/postal
+      target: _blank
+
+
+features:
+  title: 'Easy to get up and running'
+  links:
+    - label: 'Discover all the features'
+      icon: 'i-simple-icons-nuxtdotjs'
+      trailingIcon: 'i-heroicons-arrow-right-20-solid'
+      color: 'gray'
+      to: '/welcome/feature-list'
+      size: lg
+  items:
+    - title: 'Comprehensive Web Interface'
+      description: 'Manage your mail servers and view mail logs through an easy to user web interface.'
+      icon: 'i-heroicons-window-20-solid'
+    - title: 'Scalable'
+      description: 'Easily horizontally scale your mail service up and down as needed.'
+      icon: 'i-heroicons-arrows-pointing-out-16-solid'
+      target: '_blank'
+    - title: 'Webhooks'
+      description: 'Set up webhooks to notify HTTP endpoints when messages are delivered or have issues.'
+      icon: 'i-heroicons-envelope-open-solid'
+    - title: 'Development Mode'
+      description: 'Automatically hold messages in Postal as needed to handle testing during development.'
+      icon: 'i-heroicons-adjustments-vertical-solid'
+    - title: 'IP Pools'
+      description: 'Send mail from different IP addresses to help build and maintain good IP reputation.'
+      icon: 'i-heroicons-arrow-path-rounded-square-solid'
+    - title: 'Spam & anti-virus integrations'
+      description: 'Integrate with SpamAssassin, rspamd and ClamAV to have incoming & outgoing messages checked for threats and spam.'
+      icon: 'i-heroicons-trash-solid'
