@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "nuxt-og-image",
     "@nuxthq/studio",
-    "@nuxt/image"
+    "@nuxt/image",
   ],
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
@@ -37,7 +37,9 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/api/search.json": { prerender: true },
-    "/getting-started": { redirect: { to: '/welcome/feature-list', statusCode: 301 } },
+    "/getting-started": {
+      redirect: { to: "/welcome/feature-list", statusCode: 301 },
+    },
   },
   devtools: {
     enabled: true,
@@ -45,6 +47,5 @@ export default defineNuxtConfig({
   typescript: {
     strict: false,
   },
-  uiPro: { license: 'oss' }
-
+  uiPro: { license: "oss" },
 });
