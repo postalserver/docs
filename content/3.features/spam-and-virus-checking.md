@@ -6,9 +6,9 @@ category: Features
 ---
 Postal can integrate with SpamAssassin and ClamAV to automatically scan incoming and outgoing messages that pass through mail servers.
 
-<alert type="warning">
+::callout{icon="i-heroicons-exclamation-triangle" color="amber"}
 This functionality is disabled by default.
-</alert>
+::
 
 ## Setting up SpamAssassin
 
