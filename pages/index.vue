@@ -17,7 +17,7 @@ defineOgImage({
 });
 
 const ui = {
-  wrapper: "pt-0 sm:pt-0 md:pt-0 pb-24",
+  wrapper: "pt-0 py-0 sm:pt-0 md:pt-0 pb-24 lg:pb-24",
 }
 </script>
 
@@ -52,5 +52,21 @@ const ui = {
         />
       </UPageGrid>
     </ULandingSection>
+
+    <div class='mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mb-24 w-full'>
+      <h3 class="text-center text-2xl dark:text-slate-500 font-medium">The Postal project is supported by</h3>
+      <ul class="flex justify-center gap-16 mt-10">
+        <li>
+          <a target='_blank' href='https://krystal.io'>
+            <UColorModeImage light="/supporters/krystal-light.svg" dark="/supporters/krystal-dark.svg" class="w-[200px]" />
+          </a>
+        </li>
+      </ul>
+      <p class="md:w-7/12 text-center mx-auto leading-8 mt-10 text-lg text-slate-400">
+        If you want to help support this project, please get in touch with the team. A good place to start is
+        <a class='underline' href='https://discord.postalserver.io'>Discord</a> otherwise drop an e-mail to
+        <a href='mailto:team@postalserver.io' class="underline">team@postalserver.io</a>.</p>
+      
+    </div>
   </div>
 </template>
