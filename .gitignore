@@ -25,3 +25,5 @@ logs
 
 # VSC
 .history
+package-lock.json
+
