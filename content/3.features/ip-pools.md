@@ -23,6 +23,6 @@ Once an IP pool has been added, you'll need to assign it any organization that s
 
 Once allocated to an organization, you can assign the IP pool to servers from the server's **Settings** page. You can also use the IP pool to configure IP rules for the organization or server.
 
-<alert type="warning">
+::callout{icon="i-heroicons-exclamation-triangle" color="amber"}
 It's <b>very important</b> to make sure that the IP addresses you add in the web interface are actually configured on your Postal servers. If the IPs don't exist on the server, message delivery may fail or messages will not be dequeued correctly.
-</alert>
+::
