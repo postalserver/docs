@@ -40,9 +40,6 @@ export default defineNuxtConfig({
     "/docs": {
       redirect: { to: "/welcome/feature-list", statusCode: 302 },
     },
-    "/start/install": {
-      redirect: { to: "https://github.com/postalserver/install/", statusCode: 302 },
-    },
   },
   devtools: {
     enabled: true,
