@@ -23,6 +23,9 @@ const ui = {
 
 <template>
   <div>
+    <p class="bg-green-500 text-lg py-4 text-center text-white">
+      <b>Postal v3 is now available</b> &mdash; upgrade by following our <a href='/getting-started/upgrading' class="underline font-semibold">upgrade guide</a>
+    </p>
 
     <div class='relative overflow-hidden w-full h-full bg-cover bg-[#2A4147] bg-center' style="background-image:url(/factory.jpg)">      
       <div class='mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col lg:flex-row'>
