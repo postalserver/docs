@@ -46,7 +46,7 @@ export default defineAppConfig({
     links: [
       {
         icon: "i-simple-icons-discord",
-        to: "https://discord.postalserrver.io",
+        to: "https://discord.postalserver.io",
         target: "_blank",
         "aria-label": "Postal on Discord",
       },
