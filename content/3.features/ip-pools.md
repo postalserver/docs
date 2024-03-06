@@ -11,7 +11,7 @@ Postal supports sending messages from different IP addresses. This allows you to
 By default, IP pools are disabled and all email is sent from any IP address on the host running the workers. To use IP pools, you'll need to enable them in the configuration file. You can do this by setting the following in your `postal.yml` configuration file. You'll then need to restart Postal using `postal stop` and `postal start`.
 
 ```yaml
-general:
+postal:
   use_ip_pools: true
 ```
 
