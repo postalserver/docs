@@ -58,10 +58,15 @@ const ui = {
 
     <div class='mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mb-24 w-full'>
       <h3 class="text-center text-2xl dark:text-slate-500 font-medium">The Postal project is supported by</h3>
-      <ul class="flex justify-center gap-16 mt-10">
+      <ul class="flex justify-center items-center gap-16 mt-10">
         <li>
           <a target='_blank' href='https://krystal.io'>
             <UColorModeImage light="/supporters/krystal-light.svg" dark="/supporters/krystal-dark.svg" class="w-[200px]" />
+          </a>
+        </li>
+        <li>
+          <a target='_blank' href='https://katapult.io'>
+            <UColorModeImage light="/supporters/katapult-light.svg" dark="/supporters/katapult-dark.svg" class="w-[210px]" />
           </a>
         </li>
       </ul>
