@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import type { NavItem } from '@nuxt/content/dist/runtime/types'
+import type { NavItem } from "@nuxt/content/dist/runtime/types";
 
-const navigation = inject<Ref<NavItem[]>>('navigation')
+const navigation = inject<Ref<NavItem[]>>("navigation");
+
+callOnce(() => {
+  navigation.value.pop();
+});
 </script>
 
 <template>
