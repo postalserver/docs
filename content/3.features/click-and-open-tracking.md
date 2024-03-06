@@ -1,7 +1,6 @@
 ---
 title: Click & Open Tracking
 description: ''
-position: 3.0
 category: Features
 ---
 

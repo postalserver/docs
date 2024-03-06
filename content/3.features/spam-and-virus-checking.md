@@ -1,7 +1,6 @@
 ---
 title: Spam & Virus Checking
 description: ''
-position: 3.2
 category: Features
 ---
 Postal can integrate with SpamAssassin and ClamAV to automatically scan incoming and outgoing messages that pass through mail servers.

@@ -1,7 +1,6 @@
 ---
 title: SMTP TLS
 description: ''
-position: 3.2
 category: Features
 ---
 
