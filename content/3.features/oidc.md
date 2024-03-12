@@ -43,9 +43,9 @@ oidc:
   # The client secret for OIDC
   secret: zyx0987654321
   
-  # Scopes to request from the OIDC server. You'll need to find these from your provider.
-  # You should ensure you request enough scopes to ensure the user's email address is
-  # returned from the provider.
+  # Scopes to request from the OIDC server. You'll need to find these from your
+  # provider. You should ensure you request enough scopes to ensure the user's
+  # email address is returned from the provider.
   scopes:
     - openid
     - email
