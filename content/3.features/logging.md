@@ -10,7 +10,7 @@ All Postal processes log to STDOUT and STDERR which means their logs are managed
 
 If you want to send your log data to the host system's syslog then you can configure this. This is useful if you wish to use external tools like `fail2ban` to block users from accessing your system.
 
-The quickest way to achieve this is to use a docker compose overide file in `/opt/postal/install/docker-compose.overide.yml`. The contents of this file, would contain the following:
+The quickest way to achieve this is to use a docker compose overide file in `/opt/postal/install/docker-compose.override.yml`. The contents of this file, would contain the following:
 
 ```yaml
 version: "3.9"
