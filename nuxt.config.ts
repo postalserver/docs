@@ -43,6 +43,9 @@ export default defineNuxtConfig({
     "/docs": {
       redirect: { to: "/welcome/feature-list", statusCode: 302 },
     },
+    "/config-v2": {
+      redirect: { to: "/getting-started/configuration#legacy-configuration", statusCode: 301 },
+    },
   },
   devtools: {
     enabled: true,
