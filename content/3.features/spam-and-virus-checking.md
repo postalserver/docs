@@ -19,7 +19,15 @@ By default, Postal will talk to SpamAssassin's `spamd` using an TCP socket conne
 sudo apt install spamassassin
 ```
 
-Once you have installed this, you will need to open up `/etc/default/spamassassin` and change `ENABLED` to `1` and  `CRON` to `1`. On some systems (such as Ubuntu 20.04 or newer), you might need to enable the SpamAssassin daemon with the following command.
+#### Systemd systems
+On systems that use systemd (e.g. Debian Bookworm), you will need to enable the SpamAssassin timer. It is used to udpate the spam rules (which can be done manually using `sa-update`).
+
+```shell
+systemctl enable --now spamassassin-maintenance.timer
+```
+
+#### Other systems
+On other systems, you will need to open up `/etc/default/spamassassin` and change `ENABLED` to `1` and  `CRON` to `1`. On some systems (such as Ubuntu 20.04 or newer), you might need to enable the SpamAssassin daemon with the following command.
 
 ```bash
 update-rc.d spamassassin enable 
