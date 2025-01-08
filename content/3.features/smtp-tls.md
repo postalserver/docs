@@ -4,7 +4,7 @@ description: ''
 category: Features
 ---
 
-By default, Postal's SMTP server is not TLS enabled however you can enable it by generating and providing a suitable certificate. We recommend that you use a certificate issued by a regnognised certificate authority but this isn't essential to use this feature.
+By default, Postal's SMTP server is not TLS enabled however you can enable it by generating and providing a suitable certificate. We recommend that you use a certificate issued by a recognised certificate authority, but this isn't essential to use this feature.
 
 ## Key & certificate locations
 
@@ -15,7 +15,7 @@ Certificates should be placed in your `/opt/postal/config` directory.
 
 ### Generating a self signed certificate
 
-You can use the command below to generate a self signed certificate.
+You can use the command below to generate a self-signed certificate.
 
 ```bash
 openssl req -x509 -newkey rsa:4096 -keyout /opt/postal/config/smtp.key -out /opt/postal/config/smtp.cert -sha256 -days 365 -nodes
