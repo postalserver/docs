@@ -72,7 +72,7 @@ while true; do
     chmod o+r /opt/postal/config/smtp.*
 
     # Restart Postal to use the new certificates
-    postal stop && sleep 15 && postal start
+    postal restart
 done
 ```
 
@@ -114,8 +114,8 @@ sudo systemctl start monitor_certs.service
 ##### Initial Manual Certificate Copy
 Before the monitoring script takes over, you should manually copy the certificates for the first time:
 ```bash
-cp /opt/postal/caddy-data/caddy/certificates/acme.zerossl.com-v2-dv90/YOURDOMAIN/YOURDOMAIN.crt /opt/postal/config/smtp.cert
-cp /opt/postal/caddy-data/caddy/certificates/acme.zerossl.com-v2-dv90/YOURDOMAIN/YOURDOMAIN.key /opt/postal/config/smtp.key
+cp /opt/postal/caddy-data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/YOURDOMAIN/YOURDOMAIN.crt /opt/postal/config/smtp.cert
+cp /opt/postal/caddy-data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/YOURDOMAIN/YOURDOMAIN.key /opt/postal/config/smtp.key
 chmod o+r /opt/postal/config/smtp.*
 ```
 
