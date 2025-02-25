@@ -23,17 +23,6 @@ openssl req -x509 -newkey rsa:4096 -keyout /opt/postal/config/smtp.key -out /opt
 
 ### Using Caddy certificate for TLS
 
-#### Setting up Caddy to issue RSA certificate
-
-Caddy doesn't issue RSA certificates by default, so first we have to setup caddy to issue RSA certificate. This is done by adding following lines to the start of `/opt/postal/config/Caddyfile`:
-```yaml
-# Force Caddy to generate RSA certificates
-# https://github.com/postalserver/postal/discussions/1572#discussioncomment-1410343
-{
-  key_type rsa4096
-}
-```
-
 #### Setup automatic copying from Caddy to Postal
 
 To remove the need of the manual mainenance task to copy the certificate from Caddy to Postal we can automate this. The original discussion and author can be found [here](https://github.com/orgs/postalserver/discussions/2673).
