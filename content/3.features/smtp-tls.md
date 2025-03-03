@@ -25,7 +25,7 @@ openssl req -x509 -newkey rsa:4096 -keyout /opt/postal/config/smtp.key -out /opt
 
 #### Setup automatic copying from Caddy to Postal
 
-To remove the need of the manual mainenance task to copy the certificate from Caddy to Postal we can automate this. The original discussion and author can be found [here](https://github.com/orgs/postalserver/discussions/2673).
+To remove the need of the manual maintenance task to copy the certificate from Caddy to Postal, we can automate this. The original discussion and author can be found [here](https://github.com/orgs/postalserver/discussions/2673).
 
 ##### Install inotify-tools
 
@@ -39,10 +39,13 @@ sudo apt-get install inotify-tools
 ##### Create Monitoring Script
 
 Create a script named `monitor_certs.sh`:
+
 ```bash
 nano /opt/postal/monitor_certs.sh
 ```
+
 Add following code to the script file:
+
 ```bash
 #!/bin/bash
 
@@ -69,13 +72,17 @@ Make the script executable:
 ```bash
 chmod +x /opt/postal/monitor_certs.sh
 ```
+
 ##### Create a systemd Service
 
 Make a systemd service file:
+
 ```bash
 sudo nano /etc/systemd/system/monitor_certs.service
 ```
+
 Insert the following content:
+
 ```yaml
 [Unit]
 Description=Monitor Caddy Certificates for Postal
@@ -91,17 +98,24 @@ WantedBy=multi-user.target
 ```
 
 ##### Activate the Service
+
 Reload the systemd daemons:
+
 ```bash
 sudo systemctl daemon-reload
 ```
+
 Enable and start the service:
+
 ```bash
 sudo systemctl enable monitor_certs.service
 sudo systemctl start monitor_certs.service
 ```
+
 ##### Initial Manual Certificate Copy
+
 Before the monitoring script takes over, you should manually copy the certificates for the first time:
+
 ```bash
 cp /opt/postal/caddy-data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/YOURDOMAIN/YOURDOMAIN.crt /opt/postal/config/smtp.cert
 cp /opt/postal/caddy-data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/YOURDOMAIN/YOURDOMAIN.key /opt/postal/config/smtp.key
