@@ -15,19 +15,50 @@ Once enabled, Postal will automatically scan your outgoing messages and replace 
 
 ## Configuring your web server
 
-To avoid messages being marked as spam, it's important that the subdomain that Postal uses in the re-written URLs is on the same domain as that sending the message. This means if you are sending mail from `example.com`, you'll need to setup `click.example.com` (or whatever you choose) to point to your Postal server.
+To avoid messages being marked as spam, it's important that the subdomain that Postal uses in the re-written URLs is on the same domain as that sending the message. This means if you are sending mail from `yourdomain.com`, you'll need to setup `click.yourdomain.com` (or whatever you choose) to point to your Postal server.
+
+There are two ways how to achive that traffic to `click.example.com` will reach Postal:
+1. Adding CNAME record for `click.yourdomain.com` to previously configured `track.postal.example.com` followed by Caddy additional configuration.
+2. Configuring custom proxy for `click.yourdomain.com` on your webserver.
+
+Then you need to configure particular Postal service :
+1. Find the web server you wish to enable tracking on in the Postal web interface
+2. Go to the **Domains** item
+3. Select **Tracking Domains**
+4. Click **Add a tracking domain**
+5. Enter the domain that you have configured and choose the configuration you want to use. It is **highly** recommended that you use SSL for these connections. Anything else is likely to cause problems with reputation and user experience.
+
+### Additional Caddy configuration
+
+If you used Caddy as proxy for overall Postal traffic it easy to add additional proxy its config `/opt/postal/config/Caddyfile`:
+
+```
+# ... previous content
+
+click.yourdomain.com {
+  reverse_proxy 127.0.0.1:5000 {
+    header_up X-Postal-Track-Host "1"
+  }
+}
+```
+
+After saving this new configuration restart Caddy:
+```
+$ docker ps
+CONTAINER ID   IMAGE                               COMMAND                  CREATED       STATUS                   PORTS                      NAMES
+bd788587e651   caddy                               "caddy run --config …"   2 weeks ago   Up 2 weeks                                          postal-caddy
+$ docker restart bd788587e651
+```
+
+After this you should see `Hello.` on `click.yourdomain.com` and SSL should work out of the box.
+
+### Custom proxy on webserver
 
 You'll need to add an appropriate virtual host on your web server that proxies traffic from that domain to the Postal web server. The web server must add the `X-Postal-Track-Host: 1` header so the Postal web server knows to treat requests as tracking requests.
 
 Once you have configured this, you should be able to visit your chosen domain in a browser and see `Hello.` printed back to you. If you don't see this, review your configuration until you do. If you still don't see this and you enable the tracking, your messages will be sent with broken links and images.
 
 If you're happy things are working, you can enable tracking as follows:
-
-1. Find the web server you wish to enable tracking on in the Postal web interface
-2. Go to the **Domains** item
-3. Select **Tracking Domains**
-4. Click **Add a tracking domain**
-5. Enter the domain that you have configured and choose the configuration you want to use. It is **highly** recommended that you use SSL for these connections. Anything else is likely to cause problems with reputation and user experience.
 
 ## Disabling tracking on a per e-mail basis
 
