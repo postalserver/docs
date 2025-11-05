@@ -21,13 +21,6 @@ There are two ways how to achive that traffic to `click.yourdomain.com` will rea
 1. Adding CNAME record for `click.yourdomain.com` to previously configured `track.postal.example.com` followed by Caddy additional configuration.
 2. Configuring custom proxy for `click.yourdomain.com` on your webserver.
 
-Then you need to configure particular Postal service :
-1. Find the web server you wish to enable tracking on in the Postal web interface
-2. Go to the **Domains** item
-3. Select **Tracking Domains**
-4. Click **Add a tracking domain**
-5. Enter the domain that you have configured and choose the configuration you want to use. It is **highly** recommended that you use SSL for these connections. Anything else is likely to cause problems with reputation and user experience.
-
 ### Additional Caddy configuration
 
 If you used Caddy as proxy for overall Postal traffic it easy to add additional proxy its config `/opt/postal/config/Caddyfile`:
@@ -58,7 +51,14 @@ You'll need to add an appropriate virtual host on your web server that proxies t
 
 Once you have configured this, you should be able to visit your chosen domain in a browser and see `Hello.` printed back to you. If you don't see this, review your configuration until you do. If you still don't see this and you enable the tracking, your messages will be sent with broken links and images.
 
+### Setting up tracking domain
+
 If you're happy things are working, you can enable tracking as follows:
+1. Find the web server you wish to enable tracking on in the Postal web interface
+2. Go to the **Domains** item
+3. Select **Tracking Domains**
+4. Click **Add a tracking domain**
+5. Enter the domain that you have configured and choose the configuration you want to use. It is **highly** recommended that you use SSL for these connections. Anything else is likely to cause problems with reputation and user experience.
 
 ## Disabling tracking on a per e-mail basis
 
