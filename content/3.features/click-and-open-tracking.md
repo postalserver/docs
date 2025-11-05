@@ -17,7 +17,7 @@ Once enabled, Postal will automatically scan your outgoing messages and replace 
 
 To avoid messages being marked as spam, it's important that the subdomain that Postal uses in the re-written URLs is on the same domain as that sending the message. This means if you are sending mail from `yourdomain.com`, you'll need to setup `click.yourdomain.com` (or whatever you choose) to point to your Postal server.
 
-There are two ways how to achive that traffic to `click.example.com` will reach Postal:
+There are two ways how to achive that traffic to `click.yourdomain.com` will reach Postal:
 1. Adding CNAME record for `click.yourdomain.com` to previously configured `track.postal.example.com` followed by Caddy additional configuration.
 2. Configuring custom proxy for `click.yourdomain.com` on your webserver.
 
