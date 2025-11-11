@@ -15,14 +15,39 @@ Once enabled, Postal will automatically scan your outgoing messages and replace 
 
 ## Configuring your web server
 
-To avoid messages being marked as spam, it's important that the subdomain that Postal uses in the re-written URLs is on the same domain as that sending the message. This means if you are sending mail from `example.com`, you'll need to setup `click.example.com` (or whatever you choose) to point to your Postal server.
+To avoid messages being marked as spam, it's important that the subdomain that Postal uses in the re-written URLs is on the same domain as that sending the message. This means if you are sending mail from `yourdomain.com`, you'll need to setup `click.yourdomain.com` (or whatever you choose) to point to your Postal server.
+
+There are two ways how to achive that traffic to `click.yourdomain.com` will reach Postal:
+1. Adding CNAME record for `click.yourdomain.com` to previously configured `track.postal.example.com` followed by Caddy additional configuration.
+2. Configuring custom proxy for `click.yourdomain.com` on your webserver.
+
+### Additional Caddy configuration
+
+If you used Caddy as proxy for overall Postal traffic it easy to add additional proxy its config `/opt/postal/config/Caddyfile`:
+
+```
+# ... previous content
+
+click.yourdomain.com {
+  reverse_proxy 127.0.0.1:5000 {
+    header_up X-Postal-Track-Host "1"
+  }
+}
+```
+
+After saving this new configuration restart Caddy, for example if you're using docker, you may be able to `docker restart postal-caddy`.
+
+After this you should see `Hello.` on `click.yourdomain.com` and SSL should work out of the box.
+
+### Custom proxy on webserver
 
 You'll need to add an appropriate virtual host on your web server that proxies traffic from that domain to the Postal web server. The web server must add the `X-Postal-Track-Host: 1` header so the Postal web server knows to treat requests as tracking requests.
 
 Once you have configured this, you should be able to visit your chosen domain in a browser and see `Hello.` printed back to you. If you don't see this, review your configuration until you do. If you still don't see this and you enable the tracking, your messages will be sent with broken links and images.
 
-If you're happy things are working, you can enable tracking as follows:
+### Setting up tracking domain
 
+If you're happy things are working, you can enable tracking as follows:
 1. Find the web server you wish to enable tracking on in the Postal web interface
 2. Go to the **Domains** item
 3. Select **Tracking Domains**
