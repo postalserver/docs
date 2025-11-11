@@ -35,13 +35,7 @@ click.yourdomain.com {
 }
 ```
 
-After saving this new configuration restart Caddy:
-```
-$ docker ps
-CONTAINER ID   IMAGE                               COMMAND                  CREATED       STATUS                   PORTS                      NAMES
-bd788587e651   caddy                               "caddy run --config …"   2 weeks ago   Up 2 weeks                                          postal-caddy
-$ docker restart bd788587e651
-```
+After saving this new configuration restart Caddy, for example if you're using docker, you may be able to `docker restart postal-caddy`.
 
 After this you should see `Hello.` on `click.yourdomain.com` and SSL should work out of the box.
 
